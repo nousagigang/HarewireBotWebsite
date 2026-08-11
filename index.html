@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HarewireBot — a Discord bot in the making, one phase, one command, and one release at a time.">
+  <title>HarewireBot — Development Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="crt" aria-hidden="true"></div>
+
+  <main>
+    <!-- START SCREEN -->
+    <section id="start-screen" class="start-screen" aria-label="HarewireBot start screen">
+      <div class="start-screen__monitor">
+        <div class="stars" aria-hidden="true"></div>
+        <p class="eyebrow">DISCORD BOT // DEVELOPMENT BUILD</p>
+        <h1>HarewireBot</h1>
+        <p class="start-prompt">
+          <button id="start-button" class="start-button" type="button">
+            <span>&lt;&lt; PRESS START &gt;&gt;</span>
+          </button>
+        </p>
+        <p class="version">BUILD 0.3.0 // PRE-RELEASE</p>
+      </div>
+    </section>
+
+    <!-- MAIN SITE -->
+    <div id="site" class="site" aria-hidden="true">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="HarewireBot home">
+          <span class="brand__rabbit">🐇</span>
+          <span>HAREWIREBOT</span>
+        </a>
+        <button id="menu-button" class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+          MENU
+        </button>
+        <nav id="site-nav" class="nav" aria-label="Main navigation">
+          <a href="#about">ABOUT</a>
+          <a href="#progress">PROGRESS</a>
+          <a href="#journey">JOURNEY</a>
+        </nav>
+      </header>
+
+      <div id="top"></div>
+
+      <section class="hero">
+        <div class="hero__grid"></div>
+        <div class="container hero__content">
+          <p class="status-line"><span class="status-dot"></span> SYSTEM ONLINE // DEVELOPMENT BUILD</p>
+          <h2>HarewireBot</h2>
+          <p class="hero__tagline">The rabbit is still running.</p>
+          <p class="hero__sub">A Discord bot in the making — one phase, one command, and one release at a time.</p>
+          <a class="pixel-button" href="#about">ENTER DEVELOPMENT HUB <span>→</span></a>
+        </div>
+      </section>
+
+      <div class="container content">
+        <section id="about" class="panel">
+          <div class="panel__label">01 // ABOUT</div>
+          <h2>🐇 HarewireBot</h2>
+          <p class="lead">A Discord bot in the making — one phase, one command, and one release at a time.</p>
+
+          <p><strong>HarewireBot</strong> is a Discord bot currently under active development, built with <strong>Cloudflare Workers</strong> and designed around Discord's slash command system.</p>
+
+          <p>The project started as an experiment to explore how a lightweight, serverless Discord bot could be built, deployed, and gradually expanded into a useful server utility.</p>
+
+          <p>It is still a work in progress — but the rabbit is already learning how to talk. 🐇💬</p>
+        </section>
+
+        <section class="warning-panel">
+          <div class="warning-panel__icon">⚠</div>
+          <div>
+            <p class="panel__label">SYSTEM NOTICE</p>
+            <h2>Under Development</h2>
+            <p><strong>HarewireBot is not production-ready yet.</strong></p>
+            <p>The project is being developed incrementally through defined development phases. New features are designed, implemented, tested, and released as the project grows.</p>
+            <p>The source repository is currently <strong>private</strong> while development continues.</p>
+            <p>This website serves as the public development hub where you can follow HarewireBot's progress, releases, milestones, and upcoming plans.</p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__label">02 // CAPABILITIES</div>
+          <h2>✨ What HarewireBot Can Do</h2>
+          <p>HarewireBot already has a working foundation for Discord slash commands.</p>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-card__icon">🏓</span>
+              <h3>Slash commands</h3>
+              <p>Interact with HarewireBot directly through Discord.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-card__icon">💬</span>
+              <h3>Command options</h3>
+              <p>Commands can accept user-provided input.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-card__icon">📋</span>
+              <h3>Command registration</h3>
+              <p>Commands can be registered and synchronized with Discord.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-card__icon">🔐</span>
+              <h3>Permission controls</h3>
+              <p>Commands can require specific Discord permissions.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-card__icon">🛡️</span>
+              <h3>Runtime checks</h3>
+              <p>Protected commands verify permissions before executing.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-card__icon">☁️</span>
+              <h3>Serverless deployment</h3>
+              <p>Powered by Cloudflare Workers.</p>
+            </article>
+          </div>
+
+          <p class="muted">The bot is still small, but its architecture is designed to grow with the project.</p>
+        </section>
+
+        <section class="panel">
+          <div class="panel__label">03 // STACK</div>
+          <h2>🛠️ Built With</h2>
+          <p>HarewireBot is currently built around:</p>
+          <div class="stack-list">
+            <span>TypeScript</span>
+            <span>Cloudflare Workers</span>
+            <span>Hono</span>
+            <span>Discord Interactions API</span>
+          </div>
+          <p>Development is handled with GitHub and deployment runs through Cloudflare.</p>
+        </section>
+
+        <section id="progress" class="panel progress-panel">
+          <div class="panel__label">04 // STATUS</div>
+          <div class="progress-heading">
+            <div>
+              <p class="version-tag">CURRENT VERSION</p>
+              <h2>v0.3.0 <span>(pre-release)</span></h2>
+            </div>
+            <div class="build-badge">BUILD ACTIVE</div>
+          </div>
+
+          <div class="phase">
+            <div class="phase__top">
+              <h3>Phase 4 — Command System</h3>
+              <strong>100% ✅</strong>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-label="Phase 4 progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+              <span style="width: 100%"></span>
+            </div>
+            <p>The command-system milestone established the foundation HarewireBot will use for future features, including command routing, registration, options, and permissions.</p>
+          </div>
+
+          <div class="next-phase">
+            <span class="next-phase__arrow">→</span>
+            <div>
+              <p class="version-tag">WHAT'S NEXT?</p>
+              <h3>Phase 5 — Bot Features</h3>
+              <p>The next stage will build useful functionality on top of the command system.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="journey" class="panel journey-panel">
+          <div class="panel__label">05 // NAVIGATION</div>
+          <h2>🗺️ Follow the Journey</h2>
+          <p>HarewireBot is being built through this development website.</p>
+
+          <div class="journey-grid">
+            <a href="development.html" class="journey-card">
+              <span>01</span>
+              <strong>Development</strong>
+              <small>Follow the latest development progress.</small>
+            </a>
+            <a href="roadmap.html" class="journey-card">
+              <span>02</span>
+              <strong>Roadmap</strong>
+              <small>See what's planned for the future.</small>
+            </a>
+            <a href="changelog.html" class="journey-card">
+              <span>03</span>
+              <strong>Changelog</strong>
+              <small>Read about changes across releases.</small>
+            </a>
+            <a href="releases.html" class="journey-card">
+              <span>04</span>
+              <strong>Releases</strong>
+              <small>Explore HarewireBot's version history.</small>
+            </a>
+            <a href="journal.html" class="journey-card">
+              <span>05</span>
+              <strong>Development Journal</strong>
+              <small>Read how features are designed and built.</small>
+            </a>
+          </div>
+        </section>
+
+        <section class="final-message">
+          <div class="rabbit">🐇</div>
+          <p class="panel__label">END OF CURRENT BUILD</p>
+          <h2>One Phase at a Time</h2>
+          <p>HarewireBot isn't finished yet.</p>
+          <p>That's the point.</p>
+          <p>This website exists to document the journey from a simple Discord bot experiment into something much bigger.</p>
+          <p class="final-message__quote"><strong>The rabbit is still running.</strong></p>
+          <p class="more">🐇💨 <em>More to come.</em></p>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <div class="container footer__inner">
+          <div>
+            <strong>🐇 HAREWIREBOT</strong>
+            <p>A Discord bot in the making.</p>
+          </div>
+          <nav aria-label="Footer navigation">
+            <a href="development.html">Development</a>
+            <a href="roadmap.html">Roadmap</a>
+            <a href="changelog.html">Changelog</a>
+            <a href="releases.html">Releases</a>
+            <a href="journal.html">Journal</a>
+          </nav>
+          <p class="copyright">© 2026 HarewireBot. Built one phase at a time.</p>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
