@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="HarewireBot current development and operational status.">
+<title>Status — HarewireBot</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="crt" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand__rabbit">🐇</span><span>HAREWIREBOT</span></a>
+  <button id="menu-button" class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">MENU</button>
+  <nav id="site-nav" class="nav" aria-label="Main navigation">
+    <a href="index.html">HOME</a>
+    <a href="development.html">DEVELOPMENT</a>
+    <a href="roadmap.html">ROADMAP</a>
+    <a href="changelog.html">CHANGELOG</a>
+    <a href="releases.html">RELEASES</a>
+    <a class="active" href="status.html">STATUS</a>
+  </nav>
+</header>
+
+<main class="container status-page">
+  <section class="page-hero">
+    <p class="panel__label">HAREWIREBOT // SYSTEM STATUS</p>
+    <h1>🟢 Status</h1>
+    <p>A quick overview of HarewireBot's current development and operational status.</p>
+    <div class="status-alert"><strong>ACTIVE DEVELOPMENT:</strong> HarewireBot is currently under active development and is not yet a production service.</div>
+  </section>
+
+  <section class="status-overview">
+    <div class="section-heading"><span class="panel__label">SYSTEM // CURRENT STATE</span><h2>🐇 Current Status</h2></div>
+    <div class="status-table" role="table" aria-label="HarewireBot current status">
+      <div class="status-table__row status-table__head" role="row"><span>COMPONENT</span><span>STATUS</span></div>
+      <div class="status-table__row" role="row"><strong>HarewireBot Development</strong><span class="state green">🟢 Active</span></div>
+      <div class="status-table__row" role="row"><strong>Current Release</strong><span class="state green">🟢 v0.3.0 — Pre-release</span></div>
+      <div class="status-table__row" role="row"><strong>Current Milestone</strong><span class="state green">🟢 Phase 5 — Bot Features</span></div>
+      <div class="status-table__row" role="row"><strong>Command System</strong><span class="state green">🟢 Complete</span></div>
+      <div class="status-table__row" role="row"><strong>Production Readiness</strong><span class="state yellow">🟡 In Progress</span></div>
+      <div class="status-table__row" role="row"><strong>Public Source Code</strong><span class="state private">🔒 Private</span></div>
+    </div>
+  </section>
+
+  <section class="systems-section">
+    <div class="section-heading"><span class="panel__label">SYSTEM // CORE SERVICES</span><h2>⚙️ Core Systems</h2></div>
+    <div class="system-grid">
+      <article class="system-card operational">
+        <div class="system-card__top"><span>DISCORD INTEGRATION</span><b>🟢 OPERATIONAL</b></div>
+        <h3>Discord Integration</h3>
+        <p>HarewireBot's Discord interaction system is operational and successfully handles slash commands.</p>
+      </article>
+      <article class="system-card operational">
+        <div class="system-card__top"><span>COMMAND SYSTEM</span><b>🟢 OPERATIONAL</b></div>
+        <h3>Command System</h3>
+        <p>The command system introduced during Phase 4 is complete and currently supports command routing, options, registration, and permission controls.</p>
+      </article>
+      <article class="system-card operational">
+        <div class="system-card__top"><span>CLOUD INFRASTRUCTURE</span><b>🟢 OPERATIONAL</b></div>
+        <h3>Cloudflare Workers</h3>
+        <p>HarewireBot is deployed using Cloudflare Workers.</p>
+      </article>
+      <article class="system-card operational">
+        <div class="system-card__top"><span>COMMAND REGISTRATION</span><b>🟢 OPERATIONAL</b></div>
+        <h3>Command Registration</h3>
+        <p>Commands can be registered and synchronized with the development Discord server through the protected registration system.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="development-status">
+    <span class="panel__label">DEVELOPMENT // CURRENT MILESTONE</span>
+    <div class="dev-status-content">
+      <div><span class="phase-label">PHASE 5</span><h2>🚧 Bot Features</h2></div>
+      <p>Development is currently focused on expanding HarewireBot beyond its command-system foundation.</p>
+      <p>New features will be introduced and tested throughout this milestone.</p>
+    </div>
+  </section>
+
+  <section class="production-panel">
+    <div class="production-icon">🟡</div>
+    <div>
+      <span class="panel__label">PRODUCTION // READINESS</span>
+      <h2>Not production-ready</h2>
+      <p>HarewireBot is still a development project.</p>
+      <p>It is currently being tested in a controlled environment and should not be considered a finished public Discord bot.</p>
+      <p>Production deployment, additional security hardening, reliability improvements, and other operational requirements will be addressed as the project matures.</p>
+    </div>
+  </section>
+
+  <section class="latest-release">
+    <span class="panel__label">RELEASE // LATEST</span>
+    <h2>📦 v0.3.0 — Pre-release</h2>
+    <p>Phase 4 introduced HarewireBot's command-system foundation.</p>
+    <a class="text-link" href="releases.html">→ See the Releases page for the complete release history.</a>
+  </section>
+
+  <section class="updates-panel">
+    <span class="panel__label">SIGNAL // STATUS UPDATES</span>
+    <h2>📝 Status Updates</h2>
+    <p>Major changes to HarewireBot's development status will be reflected on this page.</p>
+    <p>For detailed development progress, visit the <a class="text-link" href="development.html">Development</a> page.</p>
+    <p>For planned work, visit the <a class="text-link" href="roadmap.html">Roadmap</a>.</p>
+    <blockquote>🐇 <strong>Status:</strong> Still building. Still testing. Still running.</blockquote>
+  </section>
+
+  <div class="page-back"><a class="pixel-button" href="index.html">← BACK TO HOME</a></div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div><strong>🐇 HAREWIREBOT</strong><p>A Discord bot in the making.</p></div>
+    <nav aria-label="Footer navigation">
+      <a href="development.html">Development</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="changelog.html">Changelog</a>
+      <a href="releases.html">Releases</a>
+      <a href="status.html">Status</a>
+    </nav>
+    <p class="copyright">© 2026 HarewireBot. Built one phase at a time.</p>
+  </div>
+</footer>
+
+<script>
+const b=document.getElementById("menu-button"),n=document.getElementById("site-nav");
+b.onclick=()=>{const o=n.classList.toggle("is-open");b.setAttribute("aria-expanded",String(o));};
+n.querySelectorAll("a").forEach(a=>a.onclick=()=>n.classList.remove("is-open"));
+</script>
+</body>
+</html>
