@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HarewireBot changelog — notable changes across releases.">
+  <title>Changelog — HarewireBot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="crt" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand__rabbit">🐇</span><span>HAREWIREBOT</span></a>
+    <button id="menu-button" class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">MENU</button>
+    <nav id="site-nav" class="nav" aria-label="Main navigation">
+      <a href="index.html">HOME</a><a href="development.html">DEVELOPMENT</a><a href="roadmap.html">ROADMAP</a>
+      <a href="changelog.html">CHANGELOG</a><a href="releases.html">RELEASES</a><a href="status.html">STATUS</a>
+    </nav>
+  </header>
+
+  <main class="container changelog-page">
+    <section class="page-hero">
+      <p class="panel__label">HAREWIREBOT // CHANGELOG</p>
+      <h1>Changelog</h1>
+      <p>All notable changes to HarewireBot are documented in this file.</p>
+      <p class="standards">The format is based on
+        <a href="https://keepachangelog.com/en/1.1.0/" target="_blank" rel="noopener noreferrer">Keep a Changelog</a>,
+        and this project adheres to
+        <a href="https://semver.org/spec/v2.0.0.html" target="_blank" rel="noopener noreferrer">Semantic Versioning</a>.
+      </p>
+    </section>
+
+    <div class="release-list">
+
+      <article class="release release--latest">
+        <div class="release__header"><div><span class="release__status">CURRENT RELEASE</span><h2>[0.3.0]</h2></div><time datetime="2026-08-12">2026-08-12</time></div>
+
+        <section class="release__section"><h3>Added</h3><ul>
+          <li>Added reusable slash command architecture.</li>
+          <li>Added <code>/ping</code> command handling through the command router.</li>
+          <li>Added <code>/say</code> command with a required <code>message</code> option.</li>
+          <li>Added command option support for slash commands.</li>
+          <li>Added centralized Discord command registration.</li>
+          <li>Added protected command registration using <code>X-Registration-Secret</code>.</li>
+          <li>Added Discord command permission registration.</li>
+          <li>Added runtime permission enforcement for commands.</li>
+          <li>Added <strong>Manage Messages</strong> permission protection to <code>/say</code>.</li>
+          <li>Added command synchronization through the <code>/register</code> endpoint.</li>
+        </ul></section>
+
+        <section class="release__section"><h3>Changed</h3><ul>
+          <li>Updated command routing to pass slash command options to command handlers.</li>
+          <li>Updated command registration to include command options and permission requirements.</li>
+          <li>Improved command definitions to support optional default member permissions.</li>
+          <li>Improved command handling architecture to support future commands and permissions.</li>
+        </ul></section>
+
+        <section class="release__section security"><h3>Security</h3><ul>
+          <li>Added permission checks before executing protected commands.</li>
+          <li><code>/say</code> is restricted to members with the <strong>Manage Messages</strong> permission.</li>
+          <li><code>/register</code> continues to require the configured registration secret.</li>
+        </ul></section>
+
+        <section class="release__section"><h3>Testing</h3><ul>
+          <li>Verified <code>/ping</code> continues to respond correctly.</li>
+          <li>Verified <code>/say</code> responds correctly with a message.</li>
+          <li>Verified required command options are enforced by Discord.</li>
+          <li>Verified users without the required permission cannot use <code>/say</code>.</li>
+          <li>Verified <code>/register</code> rejects unauthorized requests.</li>
+          <li>Verified <code>/commands</code> reports the expected command definitions and permissions.</li>
+        </ul></section>
+      </article>
+
+      <article class="release">
+        <div class="release__header"><div><span class="release__status">PRE-RELEASE</span><h2>[0.2.0]</h2></div><time datetime="2026-08-09">2026-08-09</time></div>
+
+        <section class="release__section"><h3>Added</h3><ul>
+          <li>Added a modular command system.</li>
+          <li>Added a dedicated <code>/ping</code> command module.</li>
+          <li>Added a command router for handling slash commands.</li>
+          <li>Added the <code>HarewireCommand</code> type for consistent command structure.</li>
+        </ul></section>
+
+        <section class="release__section"><h3>Changed</h3><ul>
+          <li>Separated Discord request handling from individual command logic.</li>
+          <li>Refactored <code>/ping</code> to use the new command architecture.</li>
+          <li>Improved the internal project structure to make future commands easier to add.</li>
+        </ul></section>
+
+        <section class="release__section"><h3>Verified</h3><ul>
+          <li><code>/ping</code> continues to respond successfully with <code>🏓 Pong!</code> after the architectural refactor.</li>
+        </ul></section>
+
+        <section class="release__section"><h3>Development Status</h3><ul>
+          <li>HarewireBot remains in active development.</li>
+          <li><code>v0.2.0</code> is a pre-release.</li>
+        </ul></section>
+      </article>
+
+      <article class="release">
+        <div class="release__header"><div><span class="release__status">INITIAL RELEASE</span><h2>[v0.1.0]</h2></div><time datetime="2026-08-05">2026-08-05</time></div>
+
+        <section class="release__section"><h3>Added</h3><ul>
+          <li>Initial Cloudflare Workers project setup.</li>
+          <li>GitHub repository with automatic Cloudflare deployment.</li>
+          <li>Hono web framework integration.</li>
+          <li>Discord Interaction endpoint verification.</li>
+          <li>Secure environment variable support.</li>
+          <li>Initial slash command registration endpoint.</li>
+          <li><code>/commands</code> endpoint for debugging registered guild commands.</li>
+          <li>First slash command: <code>/ping</code>.</li>
+          <li>Successful Discord → Cloudflare Worker → Discord interaction flow.</li>
+          <li><code>.env.example</code> template.</li>
+          <li>MIT License.</li>
+          <li>Initial project documentation.</li>
+        </ul></section>
+
+        <section class="release__section"><h3>Changed</h3><ul>
+          <li>Improved interaction handling for Discord application commands.</li>
+          <li>Updated project dependencies to current versions.</li>
+        </ul></section>
+
+        <section class="release__section"><h3>Fixed</h3><ul>
+          <li>Fixed dependency version resolution during deployment.</li>
+          <li>Fixed <code>package.json</code> formatting issues preventing deployment.</li>
+          <li>Fixed Discord interaction endpoint verification.</li>
+          <li>Fixed <code>/ping</code> command routing to return <strong>🏓 Pong!</strong>.</li>
+        </ul></section>
+      </article>
+    </div>
+
+    <div class="page-back"><a class="pixel-button" href="index.html">← BACK TO HOME</a></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div><strong>🐇 HAREWIREBOT</strong><p>A Discord bot in the making.</p></div>
+      <nav aria-label="Footer navigation">
+        <a href="development.html">Development</a><a href="roadmap.html">Roadmap</a><a href="changelog.html">Changelog</a>
+        <a href="releases.html">Releases</a><a href="status.html">Status</a>
+      </nav>
+      <p class="copyright">© 2026 HarewireBot. Built one phase at a time.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById("menu-button");
+    const nav = document.getElementById("site-nav");
+    menuButton.addEventListener("click", () => {
+      const open = nav.classList.toggle("is-open");
+      menuButton.setAttribute("aria-expanded", String(open));
+    });
+    nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      nav.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+    }));
+  </script>
+</body>
+</html>

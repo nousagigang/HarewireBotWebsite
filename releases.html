@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HarewireBot releases — development milestones, release notes, and what's next.">
+<title>Releases — HarewireBot</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="crt" aria-hidden="true"></div>
+<header class="topbar">
+<a class="brand" href="index.html"><span class="brand__rabbit">🐇</span><span>HAREWIREBOT</span></a>
+<button id="menu-button" class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">MENU</button>
+<nav id="site-nav" class="nav" aria-label="Main navigation">
+<a href="index.html">HOME</a><a href="development.html">DEVELOPMENT</a><a href="roadmap.html">ROADMAP</a><a href="changelog.html">CHANGELOG</a><a class="active" href="releases.html">RELEASES</a><a href="status.html">STATUS</a>
+</nav></header>
+
+<main class="container releases-page">
+<section class="page-hero"><p class="panel__label">HAREWIREBOT // RELEASE ARCHIVE</p><h1>Releases</h1><p>Development milestones, release notes, and the story of HarewireBot as it grows.</p>
+<div class="release-index"><a href="#v030">v0.3.0</a><a href="#v020">v0.2.0</a><a href="#v010">v0.1.0</a></div></section>
+
+<div class="release-archive">
+
+<article class="release release--latest" id="v030">
+<div class="release__header"><div><span class="release__status">LATEST • PRE-RELEASE</span><h2>v0.3.0</h2></div><div class="release__meta"><time>2026-08-12</time><span>aff703b</span></div></div>
+<div class="release__byline">Released by <strong>@k4lm3d</strong> • 11 hours ago</div>
+<div class="release-callout"><span>PHASE 4</span><strong>Command System: Complete ✅</strong></div>
+<section class="release__intro"><p>This release completes <strong>Phase 4</strong> of HarewireBot, establishing a reusable slash command system with command options, registration, and permission controls.</p></section>
+<section class="release__section"><h3>✨ What's New</h3><ul>
+<li>🏓 <strong><code>/ping</code></strong> — Responds with <code>🏓 Pong!</code></li><li>💬 <strong><code>/say</code></strong> — Makes HarewireBot send a message provided by the user.</li><li>📝 <strong>Command options</strong> — Commands can now accept user-provided options.</li><li>📋 <strong>Command registration</strong> — Added centralized registration and synchronization with Discord.</li><li>🔐 <strong>Command permissions</strong> — Commands can define required Discord permissions.</li><li>🛡️ <strong>Runtime permission checks</strong> — HarewireBot verifies permissions before executing protected commands.</li><li>🔑 <strong>Protected registration</strong> — The <code>/register</code> endpoint requires the configured <code>X-Registration-Secret</code> header.</li>
+</ul></section>
+<section class="release__section verification"><h3>🔒 Permissions</h3><ul><li><code>/say</code> requires the <strong>Manage Messages</strong> permission.</li><li><code>/ping</code> remains available without special permissions.</li></ul></section>
+<section class="release__section verification"><h3>✅ Verification</h3><p>All Phase 4 regression tests passed, including command execution, option handling, registration, authorization, and permission enforcement.</p></section>
+<section class="release__section next"><h3>🚀 What's Next</h3><p>With the command system foundation complete, HarewireBot is ready to move into <strong>Phase 5</strong>, where we'll begin building more useful bot functionality on top of this architecture.</p></section>
+<section class="release__section changed"><h3>What's Changed</h3><ul>
+<li>docs: update changelog for v0.2.0 — @k4lm3d · <a href="https://github.com/nousagigang/HarewireBot/pull/4">PR #4</a></li>
+<li>Phase 4.4 — Command Registration — @k4lm3d · <a href="https://github.com/nousagigang/HarewireBot/pull/5">PR #5</a></li>
+<li>Phase 4.5 — Add <code>/say</code> command with command options — @k4lm3d · <a href="https://github.com/nousagigang/HarewireBot/pull/6">PR #6</a></li>
+<li>Phase 4.5 — Register <code>/say</code> command correctly — @k4lm3d · <a href="https://github.com/nousagigang/HarewireBot/pull/7">PR #7</a></li>
+<li>Phase 4.5 — Fix <code>/say</code> command option registration — @k4lm3d · <a href="https://github.com/nousagigang/HarewireBot/pull/8">PR #8</a></li>
+<li>Phase 4.6.3 — Add command permission support — @k4lm3d · <a href="https://github.com/nousagigang/HarewireBot/pull/9">PR #9</a></li>
+<li>Phase 4 — Command System — @k4lm3d · <a href="https://github.com/nousagigang/HarewireBot/pull/10">PR #10</a></li>
+</ul></section>
+<div class="release-footer"><a href="https://github.com/nousagigang/HarewireBot/compare/v0.2.0...v0.3.0">VIEW FULL CHANGELOG →</a><span>SOURCE CODE · ZIP</span></div>
+</article>
+
+<article class="release" id="v020">
+<div class="release__header"><div><span class="release__status">PRE-RELEASE</span><h2>v0.2.0</h2></div><div class="release__meta"><time>2026-08-09</time><span>20a8fb8</span></div></div>
+<div class="release__byline">Released by <strong>@k4lm3d</strong> • 3 days ago</div>
+<section class="release__intro"><p>Second development milestone for HarewireBot.</p><p>This release introduces the first iteration of a modular command architecture, making the bot easier to maintain and extend as new slash commands are added.</p></section>
+<section class="release__section"><h3>✨ Highlights</h3><ul><li>Introduced a dedicated command system.</li><li>Moved <code>/ping</code> into its own command module.</li><li>Added a command router for handling slash commands.</li><li>Added a shared <code>HarewireCommand</code> type for consistent command structure.</li><li>Separated Discord request handling from individual command logic.</li><li>Improved the project's internal architecture without changing existing bot behavior.</li></ul></section>
+<section class="release__section"><h3>🏓 Current Command</h3><div class="command-display"><code>/ping</code><span>→</span><strong>🏓 Pong!</strong></div></section>
+<section class="release__section"><h3>🏗️ Architecture</h3><pre class="architecture">Discord
+   ↓
+index.ts
+   ↓
+Command Router
+   ↓
+Command Module
+   ↓
+Response</pre><p>This provides a foundation for adding future commands without placing all command logic inside <code>index.ts</code>.</p></section>
+<section class="release__section"><h3>🧪 Development Status</h3><p>HarewireBot is still in active development and is currently being tested on a private development server.</p><p>This release is a <strong>pre-release</strong> and is not considered a stable production release.</p></section>
+<section class="release__section next"><h3>🚧 What's Next</h3><p>The next development milestone will focus on improving command registration and allowing command definitions to be reused for both Discord registration and command execution.</p><p>Future plans include:</p><ul><li>More slash commands</li><li>Rich embeds</li><li>Cloudflare D1 integration</li><li>Persistent data storage</li><li>User profiles</li><li>Server configuration</li><li>Additional bot utilities</li></ul></section>
+<div class="release-nav"><span>Previous: <code>v0.1.0</code></span><span>Current: <code>v0.2.0</code></span></div>
+<section class="release__section changed"><h3>What's Changed</h3><ul><li>Phase 4.1 → Separate commands from the main application file — @k4lm3d · <a href="https://github.com/nousagigang/HarewireBot/pull/1">PR #1</a></li><li>Phase 4.2 — Command Router — @k4lm3d · <a href="https://github.com/nousagigang/HarewireBot/pull/2">PR #2</a></li><li>Phase 4.3 — Clean up index.ts — @k4lm3d · <a href="https://github.com/nousagigang/HarewireBot/pull/3">PR #3</a></li></ul></section>
+<section class="release__section"><h3>New Contributors</h3><p><strong>@k4lm3d</strong> made their first contribution in <a href="https://github.com/nousagigang/HarewireBot/pull/1">PR #1</a>.</p></section>
+<div class="release-footer"><a href="https://github.com/nousagigang/HarewireBot/compare/v0.1.0...v0.2.0">VIEW FULL CHANGELOG →</a><span>ASSETS · SOURCE CODE · ZIP</span></div>
+</article>
+
+<article class="release" id="v010">
+<div class="release__header"><div><span class="release__status">PRE-RELEASE • FIRST MILESTONE</span><h2>v0.1.0</h2></div><div class="release__meta"><time>2026-08-05</time><span>da1b787</span></div></div>
+<div class="release__byline">Released by <strong>@k4lm3d</strong> • last week</div>
+<section class="release__intro"><p>First public development milestone for HarewireBot.</p><p>This release establishes the project's foundation by integrating Discord Interactions with Cloudflare Workers and implementing the first working slash command.</p></section>
+<section class="release__section"><h3>✨ Highlights</h3><ul><li>Initial Cloudflare Workers setup</li><li>Hono framework integration</li><li>Discord Interaction signature verification</li><li>Guild slash command registration</li><li>First slash command: <code>/ping</code></li><li>Automatic deployment via GitHub and Cloudflare</li><li>Environment variable template (<code>.env.example</code>)</li><li>MIT License</li><li>Initial project documentation and changelog</li></ul></section>
+<section class="release__section verification"><h3>✅ Working</h3><p><code>/ping</code> responds with:</p><div class="terminal-output">🏓 Pong!</div><p>Discord → Cloudflare Worker → Discord interaction flow is fully operational.</p></section>
+<section class="release__section"><h3>📦 Tech Stack</h3><ul><li>Cloudflare Workers</li><li>TypeScript</li><li>Hono</li><li>Discord Interactions API</li></ul></section>
+<section class="release__section next"><h3>🚧 What's Next</h3><p>The next release will focus on improving the project's architecture by introducing:</p><ul><li>Modular command system</li><li>Command router</li><li>Discord registration utilities</li><li>Cleaner project structure</li></ul><p>After that, development will move toward Cloudflare D1 integration and data-driven slash commands.</p></section>
+<section class="release__section"><p>This is the first development release and serves as the foundation for future HarewireBot features.</p></section>
+<div class="release-footer"><a href="https://github.com/nousagigang/HarewireBot/commits/v0.1.0">VIEW FULL CHANGELOG →</a><span>ASSETS · SOURCE CODE · ZIP</span></div>
+</article>
+
+</div>
+<div class="page-back"><a class="pixel-button" href="index.html">← BACK TO HOME</a></div>
+</main>
+
+<footer class="footer"><div class="container footer__inner"><div><strong>🐇 HAREWIREBOT</strong><p>A Discord bot in the making.</p></div><nav aria-label="Footer navigation"><a href="development.html">Development</a><a href="roadmap.html">Roadmap</a><a href="changelog.html">Changelog</a><a href="releases.html">Releases</a><a href="status.html">Status</a></nav><p class="copyright">© 2026 HarewireBot. Built one phase at a time.</p></div></footer>
+<script>const menuButton=document.getElementById("menu-button"),nav=document.getElementById("site-nav");menuButton.addEventListener("click",()=>{const open=nav.classList.toggle("is-open");menuButton.setAttribute("aria-expanded",String(open));});nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{nav.classList.remove("is-open");menuButton.setAttribute("aria-expanded","false");}));</script>
+</body></html>
