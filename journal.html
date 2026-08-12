@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="The story of Harewire — from a 2024 BotGhost Discord bot to HarewireBot."
+  >
+
+  <title>Journal — HarewireBot</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* =========================================
+       HAREWIREBOT — JOURNAL PAGE
+       ========================================= */
+
+    .journal-page {
+      padding: 90px 0 110px;
+    }
+
+    /* ---------- Entry ---------- */
+
+    .journal-entry {
+      margin-top: 45px;
+      border: 1px solid var(--line);
+      background: rgba(0, 0, 0, 0.16);
+    }
+
+    .journal-entry__header {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      padding: 28px 32px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 130, 35, 0.025);
+    }
+
+    .entry-number {
+      color: var(--orange-dim);
+      font-family: var(--pixel);
+      font-size: 8px;
+      letter-spacing: 1px;
+    }
+
+    .journal-entry__header h2 {
+      margin: 10px 0 5px;
+      color: var(--orange-bright);
+    }
+
+    .entry-subtitle {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .journal-date {
+      white-space: nowrap;
+      color: var(--muted);
+      font-family: var(--pixel);
+      font-size: 8px;
+      padding-top: 5px;
+    }
+
+    /* ---------- Article ---------- */
+
+    .journal-body {
+      max-width: 900px;
+      margin: auto;
+      padding: 42px 45px;
+      color: #c8a77d;
+    }
+
+    .journal-body p {
+      line-height: 1.85;
+    }
+
+    .journal-body .lead {
+      font-size: 21px;
+      color: #d7b68b;
+    }
+
+    .journal-body h3 {
+      margin: 42px 0 16px;
+      color: var(--orange-bright);
+      font-size: 23px;
+    }
+
+    .journal-body code {
+      color: var(--orange);
+      font-family: var(--terminal);
+    }
+
+    /* ---------- Timeline markers ---------- */
+
+    .story-marker {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      margin: 48px 0 25px;
+      padding: 11px 14px;
+
+      border-top: 1px dashed var(--line);
+      border-bottom: 1px dashed var(--line);
+
+      color: var(--orange-dim);
+      font-family: var(--pixel);
+      font-size: 8px;
+      letter-spacing: 1px;
+    }
+
+    .story-marker span {
+      padding: 7px 8px;
+      border: 1px solid var(--orange-dim);
+      color: var(--orange);
+    }
+
+    .story-marker strong {
+      font-weight: 400;
+    }
+
+    /* ---------- Terminal note ---------- */
+
+    .terminal-note {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+
+      margin: 28px 0;
+      padding: 19px;
+
+      border: 1px solid var(--line);
+      background: rgba(0, 0, 0, 0.22);
+
+      font-family: var(--terminal);
+    }
+
+    .terminal-note__label {
+      color: var(--orange-dim);
+      font-family: var(--pixel);
+      font-size: 8px;
+      margin-bottom: 5px;
+    }
+
+    .terminal-note code {
+      color: #a9b98d;
+    }
+
+    .terminal-note strong {
+      margin-top: 4px;
+      color: var(--orange-bright);
+    }
+
+    /* ---------- Emphasis ---------- */
+
+    .journal-emphasis {
+      font-size: 28px !important;
+      color: var(--orange-bright) !important;
+      font-family: var(--pixel);
+    }
+
+    /* ---------- Turning point ---------- */
+
+    .turning-point {
+      margin: 35px 0;
+      padding: 24px;
+
+      text-align: center;
+
+      border: 1px solid rgba(255, 155, 67, 0.4);
+      border-left: 3px solid var(--orange);
+
+      background: rgba(255, 130, 35, 0.035);
+    }
+
+    .turning-point__label {
+      display: block;
+      margin-bottom: 10px;
+
+      color: var(--orange-dim);
+      font-family: var(--pixel);
+      font-size: 8px;
+    }
+
+    .turning-point strong {
+      display: block;
+      color: var(--orange-bright);
+    }
+
+    .turning-point span {
+      display: block;
+      margin-top: 8px;
+      color: #c8a77d;
+    }
+
+    /* ---------- Name reveal ---------- */
+
+    .name-reveal {
+      margin: 30px 0;
+
+      text-align: center;
+
+      color: #ddd;
+
+      font-family: var(--pixel);
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    .name-reveal span {
+      color: var(--orange);
+      text-shadow: 0 0 12px rgba(255, 130, 35, 0.3);
+    }
+
+    /* ---------- Big quote ---------- */
+
+    .big-quote {
+      margin: 30px 0;
+      padding: 22px;
+
+      border-left: 3px solid var(--orange);
+      background: rgba(255, 130, 35, 0.045);
+
+      color: var(--orange-bright);
+
+      font-family: var(--pixel);
+      font-size: 13px;
+    }
+
+    /* ---------- Timeline ---------- */
+
+    .journal-timeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+
+      margin: 40px 0;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .journal-timeline__item {
+      min-height: 125px;
+      padding: 18px 12px;
+
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .journal-timeline__item:last-child {
+      border-right: none;
+    }
+
+    .journal-timeline__year {
+      display: block;
+
+      margin-bottom: 12px;
+
+      color: var(--orange);
+
+      font-family: var(--pixel);
+      font-size: 8px;
+    }
+
+    .journal-timeline__title {
+      display: block;
+
+      color: #d0a275;
+
+      font-weight: bold;
+    }
+
+    .journal-timeline__description {
+      display: block;
+
+      margin-top: 8px;
+
+      color: var(--muted);
+
+      line-height: 1.45;
+      font-size: 13px;
+    }
+
+    /* ---------- Ending ---------- */
+
+    .journal-ending {
+      margin: 50px 0 15px;
+      padding: 32px;
+
+      text-align: center;
+
+      border: 1px solid rgba(255, 155, 67, 0.45);
+
+      background: rgba(255, 130, 35, 0.035);
+    }
+
+    .journal-ending strong {
+      display: block;
+
+      color: var(--orange-bright);
+
+      font-family: var(--pixel);
+      font-size: 14px;
+    }
+
+    .journal-ending span {
+      display: block;
+
+      margin-top: 10px;
+
+      color: #d0a275;
+    }
+
+    .journal-ending em {
+      display: block;
+
+      margin-top: 18px;
+
+      font-size: 30px;
+      font-style: normal;
+    }
+
+    /* ---------- Journal footer ---------- */
+
+    .journal-footer-note {
+      margin-top: 38px;
+      padding: 27px;
+
+      text-align: center;
+
+      border: 1px dashed var(--line);
+    }
+
+    .journal-footer-note p {
+      color: #c8a77d;
+    }
+
+    .journal-footer-note .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    /* ---------- Responsive ---------- */
+
+    @media (max-width: 800px) {
+
+      .journal-timeline {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .journal-timeline__item:nth-child(2n) {
+        border-right: none;
+      }
+
+      .journal-body {
+        padding: 32px 25px;
+      }
+    }
+
+    @media (max-width: 560px) {
+
+      .journal-page {
+        padding-top: 55px;
+      }
+
+      .journal-entry__header {
+        display: block;
+      }
+
+      .journal-date {
+        display: block;
+        margin-top: 14px;
+      }
+
+      .journal-body {
+        padding: 25px 19px;
+      }
+
+      .journal-timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .journal-timeline__item {
+        border-right: none;
+      }
+
+      .story-marker {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 9px;
+      }
+
+      .journal-footer-note .button-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="crt" aria-hidden="true"></div>
+
+  <!-- =========================================
+       HEADER
+       ========================================= -->
+
+  <header class="topbar">
+
+    <a class="brand" href="index.html">
+      <span class="brand__rabbit">🐇</span>
+      <span>HAREWIREBOT</span>
+    </a>
+
+    <button
+      id="menu-button"
+      class="menu-button"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+    >
+      MENU
+    </button>
+
+    <nav id="site-nav" class="nav" aria-label="Main navigation">
+
+      <a href="index.html">HOME</a>
+      <a href="development.html">DEVELOPMENT</a>
+      <a href="roadmap.html">ROADMAP</a>
+      <a href="changelog.html">CHANGELOG</a>
+      <a href="releases.html">RELEASES</a>
+      <a href="status.html">STATUS</a>
+      <a class="active" href="journal.html">JOURNAL</a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =========================================
+       MAIN
+       ========================================= -->
+
+  <main class="container journal-page">
+
+    <!-- Page introduction -->
+
+    <section class="page-hero">
+
+      <p class="panel__label">
+        HAREWIREBOT // DEVELOPMENT JOURNAL
+      </p>
+
+      <h1>📖 Journal</h1>
+
+      <p>
+        A place for the stories behind the code.
+      </p>
+
+      <p>
+        Not every part of HarewireBot belongs in a changelog or
+        roadmap. This is where the history, ideas, experiments,
+        and little moments behind the project can live.
+      </p>
+
+    </section>
+
+
+    <!-- =========================================
+         JOURNAL ENTRY 001
+         ========================================= -->
+
+    <article class="journal-entry">
+
+      <header class="journal-entry__header">
+
+        <div>
+
+          <span class="entry-number">
+            ENTRY 001
+          </span>
+
+          <h2>
+            🐇 The Story of Harewire
+          </h2>
+
+          <p class="entry-subtitle">
+            From a BotGhost experiment to HarewireBot.
+          </p>
+
+        </div>
+
+        <time
+          class="journal-date"
+          datetime="2026-08-12"
+        >
+          August 12, 2026
+        </time>
+
+      </header>
+
+
+      <div class="journal-body">
+
+        <p class="lead">
+          Before there was HarewireBot, there was simply
+          <strong>Harewire</strong>.
+        </p>
+
+        <p>
+          This isn't actually the first Harewire website.
+          And HarewireBot isn't the first Harewire either.
+        </p>
+
+        <p>
+          The story started back in <strong>2024</strong>,
+          with a Discord bot made for the
+          <strong>Nousagi Gang</strong>.
+        </p>
+
+
+        <!-- 2024 -->
+
+        <div class="story-marker">
+          <span>2024</span>
+          <strong>THE FIRST HAREWIRE</strong>
+        </div>
+
+
+        <h3>
+          🐇 Where the name came from
+        </h3>
+
+        <p>
+          Our group is called <strong>Nousagi Gang</strong>.
+          The Japanese word <em>nousagi</em> (野兎) refers to
+          a wild rabbit, so the rabbit theme was already there.
+        </p>
+
+        <p>
+          Then came the name <strong>Harewire</strong>.
+        </p>
+
+        <p>
+          <strong>Hare</strong> was a little nod toward the
+          rabbit connection.
+          <strong>Wire</strong> represented another part of
+          our group: the games we played together, especially
+          cyberpunk-inspired, text-based MMORPGs where
+          connections, networks, and digital worlds were a
+          big part of the experience.
+        </p>
+
+        <p>
+          Put them together and we got
+          <strong>Harewire</strong> —
+          a rabbit with a connection to our little digital world.
+        </p>
+
+
+        <div class="terminal-note">
+
+          <span class="terminal-note__label">
+            NAME // ORIGIN
+          </span>
+
+          <code>
+            NOUSAGI → WILD RABBIT → HARE
+          </code>
+
+          <code>
+            CYBERPUNK GAMES → CONNECTION → WIRE
+          </code>
+
+          <strong>
+            HARE + WIRE = HAREWIRE
+          </strong>
+
+        </div>
+
+
+        <h3>
+          🤖 Built with BotGhost
+        </h3>
+
+        <p>
+          The first Harewire was built using
+          <strong>BotGhost</strong>, a platform I genuinely
+          enjoyed using.
+        </p>
+
+        <p>
+          What made it fun was how much could be customized.
+          Commands, responses, behavior, and all the little
+          details that made a Discord bot feel like
+          <em>our</em> bot could be configured without having
+          to build the entire thing from scratch.
+        </p>
+
+        <p>
+          For a while, that was enough.
+          Harewire existed, worked, and had a place in our
+          Discord server.
+        </p>
+
+
+        <!-- 2025 -->
+
+        <div class="story-marker">
+
+          <span>2025</span>
+
+          <strong>
+            THE SCARE
+          </strong>
+
+        </div>
+
+
+        <h3>
+          ⚠️ The year Harewire almost disappeared
+        </h3>
+
+        <p>
+          Then, in 2025, BotGhost ran into an issue involving
+          Discord.
+        </p>
+
+        <p>
+          For a moment, it looked like BotGhost's operations
+          might be forced to stop.
+          Naturally, that made me wonder what would happen
+          to Harewire.
+        </p>
+
+        <p>
+          I remember thinking that I might lose the bot
+          I had made.
+        </p>
+
+        <p>
+          Fortunately, the situation didn't end that way.
+          BotGhost continued operating, and Harewire could
+          keep running.
+        </p>
+
+        <p>
+          And honestly?
+        </p>
+
+        <p class="journal-emphasis">
+          I was glad.
+        </p>
+
+        <p>
+          I've always liked BotGhost.
+          It isn't perfect, but I still appreciate what it
+          made possible for me.
+        </p>
+
+
+        <!-- 2026 -->
+
+        <div class="story-marker">
+
+          <span>2026</span>
+
+          <strong>
+            THE IDEA
+          </strong>
+
+        </div>
+
+
+        <h3>
+          💡 What if I built Harewire myself?
+        </h3>
+
+        <p>
+          Eventually, though, another thought started taking
+          shape.
+        </p>
+
+        <p>
+          I wanted to learn to make a Discord bot myself.
+        </p>
+
+        <p>
+          Not because Harewire had failed.
+          Not because I stopped liking BotGhost.
+        </p>
+
+        <p>
+          I simply wanted to understand what was happening
+          behind the scenes.
+        </p>
+
+        <p>
+          What if I could build the bot's systems myself?
+          What if I could decide exactly how commands worked?
+          What if I could add features whenever I came up
+          with an idea, without depending on a premium
+          subscription or the limits of another platform?
+        </p>
+
+        <p>
+          That was the beginning of
+          <strong>HarewireBot</strong>.
+        </p>
+
+
+        <div class="turning-point">
+
+          <span class="turning-point__label">
+            THE TURNING POINT
+          </span>
+
+          <strong>
+            Harewire didn't need to be replaced.
+          </strong>
+
+          <span>
+            It inspired something new.
+          </span>
+
+        </div>
+
+
+        <h3>
+          🐇 Why HarewireBot?
+        </h3>
+
+        <p>
+          There was one thing I didn't want to do.
+        </p>
+
+        <p>
+          I didn't want to call it
+          <strong>Harewire 2.0</strong>.
+        </p>
+
+        <p>
+          And I didn't want
+          <strong>Harewire V2</strong>, either.
+        </p>
+
+        <p>
+          The new project isn't simply the old bot rebuilt
+          with newer technology.
+          It has a different purpose.
+        </p>
+
+        <p>
+          So I added one word:
+        </p>
+
+
+        <div class="name-reveal">
+          Harewire<span>Bot</span>
+        </div>
+
+
+        <p>
+          <strong>HarewireBot</strong> is the continuation
+          of the idea, but also a new project in its own right.
+        </p>
+
+        <p>
+          Now I'm learning TypeScript, Cloudflare Workers,
+          Hono, Discord's Interactions API, command architecture,
+          permissions, deployment, testing, and everything else
+          that comes with building a bot from the ground up.
+        </p>
+
+        <p>
+          And because I'm building the system myself,
+          there's a new kind of freedom:
+        </p>
+
+
+        <blockquote class="big-quote">
+          If I can build it, I can add it.
+        </blockquote>
+
+
+        <!-- NOW -->
+
+        <div class="story-marker">
+
+          <span>NOW</span>
+
+          <strong>
+            THE RABBIT IS RUNNING
+          </strong>
+
+        </div>
+
+
+        <h3>
+          🚀 HarewireBot begins
+        </h3>
+
+        <p>
+          HarewireBot started small.
+        </p>
+
+        <p>
+          A Discord interaction endpoint.
+          A Cloudflare Worker.
+          A single <code>/ping</code> command.
+        </p>
+
+        <p>
+          Then came a command system.
+          Routing. Registration. Options.
+          Permissions. <code>/say</code>.
+          Releases. Testing. More phases.
+        </p>
+
+        <p>
+          And now we're here.
+        </p>
+
+        <p>
+          <strong>v0.3.0.</strong>
+        </p>
+
+        <p>
+          Phase 4 is complete, Phase 5 is beginning,
+          and there is still a ridiculous amount left to build.
+        </p>
+
+
+        <h3>
+          🌐 And now, the website
+        </h3>
+
+        <p>
+          The first Harewire website was simple.
+          It mostly existed to explain what the bot was
+          and document its commands and their uses.
+        </p>
+
+        <p>
+          This website is different.
+        </p>
+
+        <p>
+          It's not just a manual.
+          It's a development hub.
+        </p>
+
+        <p>
+          It has a roadmap, releases, changelog,
+          development status, and now this journal —
+          because I realized that the story behind the
+          project is worth documenting too.
+        </p>
+
+        <p>
+          In a way, this is
+          <strong>Harewire's website 2.0</strong>
+          as much as HarewireBot is a new chapter of the
+          bot itself.
+        </p>
+
+
+        <!-- Timeline -->
+
+        <div class="journal-timeline">
+
+          <div class="journal-timeline__item">
+
+            <span class="journal-timeline__year">
+              2024
+            </span>
+
+            <strong class="journal-timeline__title">
+              Harewire
+            </strong>
+
+            <small class="journal-timeline__description">
+              The original BotGhost bot.
+            </small>
+
+          </div>
+
+
+          <div class="journal-timeline__item">
+
+            <span class="journal-timeline__year">
+              2025
+            </span>
+
+            <strong class="journal-timeline__title">
+              The scare
+            </strong>
+
+            <small class="journal-timeline__description">
+              BotGhost's Discord situation.
+            </small>
+
+          </div>
+
+
+          <div class="journal-timeline__item">
+
+            <span class="journal-timeline__year">
+              2026
+            </span>
+
+            <strong class="journal-timeline__title">
+              HarewireBot
+            </strong>
+
+            <small class="journal-timeline__description">
+              A new bot built from the ground up.
+            </small>
+
+          </div>
+
+
+          <div class="journal-timeline__item">
+
+            <span class="journal-timeline__year">
+              v0.3.0
+            </span>
+
+            <strong class="journal-timeline__title">
+              Phase 4 complete
+            </strong>
+
+            <small class="journal-timeline__description">
+              The command system is ready.
+            </small>
+
+          </div>
+
+
+          <div class="journal-timeline__item">
+
+            <span class="journal-timeline__year">
+              NOW
+            </span>
+
+            <strong class="journal-timeline__title">
+              Phase 5
+            </strong>
+
+            <small class="journal-timeline__description">
+              The rabbit keeps learning.
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <h3>
+          🐇 So... what's next?
+        </h3>
+
+        <p>
+          I don't completely know yet.
+        </p>
+
+        <p>
+          And that's probably one of the best parts.
+        </p>
+
+        <p>
+          Harewire started as something I made for a group
+          of friends. Years later, it's become a project where
+          I'm learning how to build something of my own.
+        </p>
+
+        <p>
+          Maybe HarewireBot will become a powerful server
+          utility. Maybe it will become something completely
+          different.
+        </p>
+
+        <p>
+          For now, I'm happy building it one phase at a time.
+        </p>
+
+
+        <!-- Ending -->
+
+        <div class="journal-ending">
+
+          <strong>
+            Harewire isn't gone.
+          </strong>
+
+          <span>
+            It just learned how to run on its own.
+          </span>
+
+          <em>
+            🐇💨
+          </em>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- Journal footer -->
+
+    <section class="journal-footer-note">
+
+      <span class="panel__label">
+        JOURNAL // ENTRY 001
+      </span>
+
+      <p>
+        This is the beginning of the HarewireBot journal.
+        More stories will be added as the project continues.
+      </p>
+
+      <div class="button-row">
+
+        <a
+          class="pixel-button"
+          href="status.html"
+        >
+          VIEW STATUS
+        </a>
+
+        <a
+          class="pixel-button"
+          href="development.html"
+        >
+          VIEW DEVELOPMENT
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <div class="page-back">
+
+      <a
+        class="pixel-button"
+        href="index.html"
+      >
+        ← BACK TO HOME
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+       ========================================= -->
+
+  <footer class="footer">
+
+    <div class="container footer__inner">
+
+      <div>
+
+        <strong>
+          🐇 HAREWIREBOT
+        </strong>
+
+        <p>
+          A Discord bot in the making.
+        </p>
+
+      </div>
+
+      <nav aria-label="Footer navigation">
+
+        <a href="development.html">
+          Development
+        </a>
+
+        <a href="roadmap.html">
+          Roadmap
+        </a>
+
+        <a href="changelog.html">
+          Changelog
+        </a>
+
+        <a href="releases.html">
+          Releases
+        </a>
+
+        <a href="status.html">
+          Status
+        </a>
+
+        <a href="journal.html">
+          Journal
+        </a>
+
+      </nav>
+
+      <p class="copyright">
+        © 2026 HarewireBot. Built one phase at a time.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================
+       MOBILE NAVIGATION
+       ========================================= -->
+
+  <script>
+
+    const menuButton =
+      document.getElementById("menu-button");
+
+    const siteNav =
+      document.getElementById("site-nav");
+
+    menuButton.addEventListener("click", () => {
+
+      const isOpen =
+        siteNav.classList.toggle("is-open");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+    });
+
+    siteNav.querySelectorAll("a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        siteNav.classList.remove("is-open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
