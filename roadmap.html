@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HarewireBot roadmap — completed phases, current development, and future plans.">
+<title>Roadmap — HarewireBot</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="crt" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand__rabbit">🐇</span><span>HAREWIREBOT</span></a>
+  <button id="menu-button" class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">MENU</button>
+  <nav id="site-nav" class="nav" aria-label="Main navigation">
+    <a href="index.html">HOME</a>
+    <a href="development.html">DEVELOPMENT</a>
+    <a class="active" href="roadmap.html">ROADMAP</a>
+    <a href="changelog.html">CHANGELOG</a>
+    <a href="releases.html">RELEASES</a>
+    <a href="status.html">STATUS</a>
+  </nav>
+</header>
+
+<main class="container roadmap-page">
+  <section class="page-hero">
+    <p class="panel__label">HAREWIREBOT // DEVELOPMENT ROADMAP</p>
+    <h1>Roadmap</h1>
+    <p>HarewireBot is being developed one phase at a time.</p>
+    <p>This roadmap provides a general look at where the project has been, what is currently being worked on, and where it may go next.</p>
+    <div class="roadmap-note"><strong>NOTE:</strong> The roadmap is a living document. Features and priorities may change as HarewireBot evolves.</div>
+  </section>
+
+  <section class="roadmap-track">
+    <div class="roadmap-section completed">
+      <div class="roadmap-section__heading">
+        <span class="roadmap-marker">01</span>
+        <div><span class="roadmap-status">STATUS // COMPLETE</span><h2>Completed</h2></div>
+      </div>
+
+      <article class="phase-card complete">
+        <div class="phase-card__top"><span class="phase-number">PHASE 1</span><span class="phase-state">✓ COMPLETE</span></div>
+        <h3>Foundation</h3>
+        <p>Established the initial HarewireBot project and Discord integration.</p>
+        <ul class="checklist"><li>Discord application and bot setup</li><li>Cloudflare Workers integration</li><li>Discord interaction endpoint</li><li>Initial <code>/ping</code> command</li></ul>
+      </article>
+
+      <article class="phase-card complete">
+        <div class="phase-card__top"><span class="phase-number">PHASE 2</span><span class="phase-state">✓ COMPLETE</span></div>
+        <h3>Core Bot</h3>
+        <p>Established the basic structure needed to run HarewireBot reliably.</p>
+        <ul class="checklist"><li>Worker-based bot deployment</li><li>Environment configuration</li><li>Discord interaction verification</li><li>Initial project documentation</li></ul>
+      </article>
+
+      <article class="phase-card complete">
+        <div class="phase-card__top"><span class="phase-number">PHASE 3</span><span class="phase-state">✓ COMPLETE</span></div>
+        <h3>Project Infrastructure</h3>
+        <p>Established the development and release workflow around HarewireBot.</p>
+        <ul class="checklist"><li>GitHub repository</li><li>Release and versioning workflow</li><li>Changelog</li><li>Development documentation</li></ul>
+      </article>
+
+      <article class="phase-card complete phase-card--featured">
+        <div class="phase-card__top"><span class="phase-number">PHASE 4</span><span class="phase-state">✓ COMPLETE</span></div>
+        <h3>Command System</h3>
+        <p>Built the reusable command system that future HarewireBot features will use.</p>
+        <ul class="checklist"><li>Command architecture</li><li>Command routing</li><li>Slash command registration</li><li>Command options</li><li><code>/say</code> command</li><li>Command permissions</li><li>Runtime permission enforcement</li><li>Protected command registration</li></ul>
+        <div class="phase-complete-banner">PHASE 4 COMPLETE — <strong>v0.3.0 🎉</strong></div>
+      </article>
+    </div>
+
+    <div class="roadmap-section current">
+      <div class="roadmap-section__heading">
+        <span class="roadmap-marker pulse">02</span>
+        <div><span class="roadmap-status">STATUS // IN PROGRESS</span><h2>Current</h2></div>
+      </div>
+
+      <article class="phase-card active-phase">
+        <div class="phase-card__top"><span class="phase-number">PHASE 5</span><span class="phase-state">● CURRENT</span></div>
+        <h3>Bot Features</h3>
+        <p>The foundation is now in place. Phase 5 will focus on turning HarewireBot into a more useful Discord bot.</p>
+        <ul class="checklist"><li>Server utility commands</li><li>Messaging features</li><li>Bot configuration</li><li>Persistent data</li><li>Expanded permission controls</li><li>Additional quality-of-life features</li></ul>
+        <div class="phase-note"><span>▸</span> The exact features and order of development will be determined as Phase 5 progresses.</div>
+      </article>
+    </div>
+
+    <div class="roadmap-section future">
+      <div class="roadmap-section__heading">
+        <span class="roadmap-marker">03</span>
+        <div><span class="roadmap-status">STATUS // PLANNED</span><h2>Future</h2></div>
+      </div>
+
+      <article class="phase-card future-phase">
+        <div class="phase-card__top"><span class="phase-number">PHASE 6</span><span class="phase-state">○ PLANNED</span></div>
+        <h3>Expansion</h3>
+        <p>Expand HarewireBot's capabilities and make its systems more flexible.</p>
+        <ul class="checklist"><li>More advanced server tools</li><li>Expanded configuration</li><li>Additional integrations</li><li>Improved command management</li><li>More persistent features</li></ul>
+      </article>
+
+      <article class="phase-card future-phase">
+        <div class="phase-card__top"><span class="phase-number">PHASE 7</span><span class="phase-state">○ PLANNED</span></div>
+        <h3>Production Readiness</h3>
+        <p>Prepare HarewireBot for a more mature and reliable release.</p>
+        <ul class="checklist"><li>Reliability improvements</li><li>Error handling and recovery</li><li>Performance improvements</li><li>Security hardening</li><li>Operational monitoring</li><li>Production deployment considerations</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="roadmap-beyond">
+    <span class="panel__label">HAREWIREBOT // UNKNOWN TERRITORY</span>
+    <h2>🐇 Beyond the Roadmap</h2>
+    <p>HarewireBot is still young.</p>
+    <p>Some of its most interesting features haven't been decided yet, and that's intentional. The project will grow based on what makes sense as the bot's foundation becomes more capable.</p>
+    <p>The roadmap will evolve alongside the project.</p>
+    <div class="roadmap-motto"><strong>One phase at a time.</strong><strong>One release at a time.</strong></div>
+    <blockquote>🐇 <em>The rabbit is still running.</em></blockquote>
+  </section>
+
+  <div class="page-back"><a class="pixel-button" href="index.html">← BACK TO HOME</a></div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div><strong>🐇 HAREWIREBOT</strong><p>A Discord bot in the making.</p></div>
+    <nav aria-label="Footer navigation"><a href="development.html">Development</a><a href="roadmap.html">Roadmap</a><a href="changelog.html">Changelog</a><a href="releases.html">Releases</a><a href="status.html">Status</a></nav>
+    <p class="copyright">© 2026 HarewireBot. Built one phase at a time.</p>
+  </div>
+</footer>
+
+<script>
+const menuButton=document.getElementById("menu-button"),nav=document.getElementById("site-nav");
+menuButton.addEventListener("click",()=>{const open=nav.classList.toggle("is-open");menuButton.setAttribute("aria-expanded",String(open));});
+nav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{nav.classList.remove("is-open");menuButton.setAttribute("aria-expanded","false");}));
+</script>
+</body>
+</html>
