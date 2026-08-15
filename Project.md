@@ -12,7 +12,22 @@
 ├── roadmap.html
 ├── changelog.html
 ├── releases.html
-└── journal.html
+├── journal.html
+├── commands.html
+│
+├── Header.js
+├── Footer.js
+├── menu.js
+│
+├── contact.html
+├── security.html
+├── privacy-policy.html
+├── terms-of-service.html
+│
+├── README.md
+├── Project.md
+├── LICENSE
+└── .well-known/security.txt
 ````
 
 ### `index.html`
@@ -64,6 +79,26 @@ The website also includes dedicated pages for:
 | Changelog   | Track changes between versions             |
 | Releases    | Explore HarewireBot's release history      |
 | Journal     | Read detailed development stories          |
+
+## 🚀 Running Locally
+
+This is a static website, so no build process is required. You can simply open `index.html` in a web browser.
+
+Alternatively, serve the directory using any static web server. For example, use the command `python -m http.server` in your terminal. Then open `http://localhost:8000` in your browser.
+
+## 🌐 Deployment
+
+The website can be deployed to any platform capable of serving static files.
+
+Examples include:
+
+* Cloudflare Pages
+* GitHub Pages
+* Netlify
+* Vercel
+* Any traditional web server
+
+The website does not require a backend.
 
 ---
 
