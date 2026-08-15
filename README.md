@@ -42,44 +42,9 @@ The website is intentionally lightweight and uses standard web technologies:
 
 No frontend framework or JavaScript library is required.
 
-## 📁 Project Structure
-
-```text
-.
-├── index.html
-├── style.css
-├── script.js
-│
-├── development.html
-├── roadmap.html
-├── changelog.html
-├── releases.html
-└── journal.html
-````
-
 ## 🚧 Development Status
 
 The website is actively evolving alongside HarewireBot.
-
-## 🚀 Running Locally
-
-This is a static website, so no build process is required. You can simply open `index.html` in a web browser.
-
-Alternatively, serve the directory using any static web server. For example, use the command `python -m http.server` in your terminal. Then open `http://localhost:8000` in your browser.
-
-## 🌐 Deployment
-
-The website can be deployed to any platform capable of serving static files.
-
-Examples include:
-
-* Cloudflare Pages
-* GitHub Pages
-* Netlify
-* Vercel
-* Any traditional web server
-
-The website does not require a backend.
 
 ## 🐇 The HarewireBot Project
 
