@@ -4,9 +4,7 @@
 <meta name="description" content="HarewireBot development status, current milestone, progress, and development philosophy.">
 <title>Development — HarewireBot</title><link rel="stylesheet" href="style.css"></head>
 <body><div class="crt" aria-hidden="true"></div>
-<header class="topbar"><a class="brand" href="index.html"><span class="brand__rabbit">🐇</span><span>HAREWIREBOT</span></a>
-<button id="menu-button" class="menu-button" type="button" aria-expanded="false">MENU</button>
-<nav id="site-nav" class="nav"><a href="index.html">HOME</a><a class="active" href="development.html">DEVELOPMENT</a><a href="roadmap.html">ROADMAP</a><a href="changelog.html">CHANGELOG</a><a href="releases.html">RELEASES</a><a href="status.html">STATUS</a></nav></header>
+<script src="Header.js"></script><script>showHeader()</script>
 
 <main class="container development-page">
 <section class="page-hero"><p class="panel__label">HAREWIREBOT // DEVELOPMENT MONITOR</p><h1>Development</h1>
@@ -50,6 +48,6 @@
 <p>Check the <a href="changelog.html">Changelog</a> for detailed release history or the <a href="roadmap.html">Roadmap</a> to see what's planned next.</p><strong>HarewireBot is still being built.</strong><blockquote>🐇💨 <em>And the rabbit keeps running.</em></blockquote></section>
 <div class="page-back"><a class="pixel-button" href="index.html">← BACK TO HOME</a></div></main>
 
-<footer class="footer"><div class="container footer__inner"><div><strong>🐇 HAREWIREBOT</strong><p>A Discord bot in the making.</p></div><nav><a href="development.html">Development</a><a href="roadmap.html">Roadmap</a><a href="changelog.html">Changelog</a><a href="releases.html">Releases</a><a href="status.html">Status</a></nav><p class="copyright">© 2026 HarewireBot. Built one phase at a time.</p></div></footer>
-<script>const b=document.getElementById("menu-button"),n=document.getElementById("site-nav");b.onclick=()=>{let o=n.classList.toggle("is-open");b.setAttribute("aria-expanded",o)};n.querySelectorAll("a").forEach(a=>a.onclick=()=>n.classList.remove("is-open"));</script>
+<script src="Footer.js"></script><script>showFooter()</script>
+<script src="menu.js"></script>
 </body></html>
