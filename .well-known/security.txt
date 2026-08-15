@@ -1,0 +1,5 @@
+Contact: mailto:kalmedkaliber@protonmail.com
+Policy: https://harewirebot.pages.dev/security
+Acknowledgments: https://harewirebot.pages.dev/security#acknowledgments
+Canonical: https://harewirebot.pages.dev/.well-known/security.txt
+Preferred-Languages: en, en-ph, tl
