@@ -631,6 +631,414 @@
 
     </section>
 
+  
+    <style>
+      /* =========================================
+   JOURNAL ENTRY 002
+   ========================================= */
+
+.journal-entry__lead {
+  color: var(--orange-bright);
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+
+.journal-entry__emphasis {
+  margin: 30px 0;
+
+  color: var(--orange-bright);
+
+  font-family: var(--terminal);
+  font-size: 18px;
+}
+
+
+.journal-highlight {
+  margin: 30px 0;
+  padding: 25px;
+
+  border: 1px solid var(--orange);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 130, 35, 0.06),
+      transparent
+    );
+
+  text-align: center;
+}
+
+
+.journal-highlight__label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--muted);
+
+  font-family: var(--terminal);
+  font-size: 11px;
+
+  letter-spacing: 2px;
+}
+
+
+.journal-highlight strong {
+  color: var(--orange-bright);
+
+  font-family: var(--terminal);
+  font-size: 20px;
+}
+
+
+.journal-milestone {
+  margin: 35px 0;
+  padding: 25px;
+
+  border: 1px solid var(--line);
+
+  background: #0b0b0b;
+}
+
+
+.journal-milestone__title {
+  margin-bottom: 20px;
+
+  color: var(--orange);
+
+  font-family: var(--terminal);
+  font-size: 12px;
+
+  letter-spacing: 2px;
+}
+
+
+.journal-milestone__row {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 13px 0;
+
+  border-top: 1px solid var(--line);
+
+  color: #c8a77d;
+
+  font-family: var(--terminal);
+  font-size: 13px;
+}
+
+
+.journal-milestone__row:first-of-type {
+  border-top: none;
+}
+
+
+.journal-milestone__row a {
+  color: var(--orange-bright);
+
+  text-decoration: none;
+}
+
+
+.journal-milestone__row a:hover {
+  text-decoration: underline;
+}
+
+
+.journal-entry__closing {
+  margin-top: 35px;
+
+  color: var(--orange-bright);
+
+  font-size: 18px;
+}
+
+
+.journal-entry__closing a {
+  color: inherit;
+}
+
+
+.journal-entry__source {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 30px;
+  padding-top: 20px;
+
+  border-top: 1px solid var(--line);
+
+  color: var(--muted);
+
+  font-family: var(--terminal);
+  font-size: 12px;
+}
+
+
+.journal-entry__source a {
+  color: var(--orange);
+
+  text-decoration: none;
+}
+
+
+.journal-entry__source a:hover {
+  text-decoration: underline;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .journal-milestone__row {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 5px;
+  }
+
+}
+    </style>
+
+    <!-- =========================================
+     JOURNAL ENTRY 002
+     ========================================= -->
+
+<article class="journal-entry">
+
+  <div class="journal-entry__header">
+
+    <span class="journal-entry__number">
+      ENTRY 002
+    </span>
+
+    <span class="journal-entry__date">
+      AUGUST 2026
+    </span>
+
+  </div>
+
+
+  <h2>
+    🔗 The Rabbit Gets a Domain
+  </h2>
+
+
+  <p class="journal-entry__lead">
+    HarewireBot has a home on the internet.
+  </p>
+
+
+  <p>
+    The HarewireBot website was already publicly available
+    through Cloudflare Pages at
+    <strong>harewirebot.pages.dev</strong>.
+  </p>
+
+
+  <p>
+    But something was missing.
+  </p>
+
+
+  <p>
+    A proper domain.
+  </p>
+
+
+  <p>
+    Two days ago, a request was submitted to the
+    <strong>Free Domains</strong> project for an
+    <strong>is-a.bot</strong> subdomain:
+  </p>
+
+
+  <div class="journal-highlight">
+
+    <span class="journal-highlight__label">
+      REQUESTED DOMAIN
+    </span>
+
+    <strong>
+      harewire.is-a.bot
+    </strong>
+
+  </div>
+
+
+  <p>
+    And earlier today, the pull request was merged.
+  </p>
+
+
+  <p class="journal-entry__emphasis">
+    The rabbit got its domain. 🐇🌐
+  </p>
+
+
+  <p>
+    It might seem like a small milestone, but Harewire has
+    come a surprisingly long way.
+  </p>
+
+
+  <p>
+    The original Harewire started in 2024 as a BotGhost bot
+    for the Nousagi Gang.
+  </p>
+
+
+  <p>
+    Now, two years later, its successor has its own website,
+    its own public development history, releases, roadmap,
+    status page, and now its own domain.
+  </p>
+
+
+  <p>
+    The project is still nowhere near finished.
+  </p>
+
+
+  <p>
+    But it's becoming something.
+  </p>
+
+
+  <p>
+    And that's pretty cool.
+  </p>
+
+
+  <!-- =========================================
+       PROJECT MILESTONE
+       ========================================= -->
+
+  <div class="journal-milestone">
+
+    <div class="journal-milestone__title">
+      🔗 PROJECT MILESTONE
+    </div>
+
+
+    <div class="journal-milestone__row">
+
+      <span>
+        Official domain
+      </span>
+
+      <a
+        href="https://harewire.is-a.bot"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        harewire.is-a.bot ↗
+      </a>
+
+    </div>
+
+
+    <div class="journal-milestone__row">
+
+      <span>
+        Website
+      </span>
+
+      <a
+        href="https://harewirebot.pages.dev"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        harewirebot.pages.dev ↗
+      </a>
+
+    </div>
+
+
+    <div class="journal-milestone__row">
+
+      <span>
+        Domain project
+      </span>
+
+      <span>
+        Free Domains / is-a.bot
+      </span>
+
+    </div>
+
+
+    <div class="journal-milestone__row">
+
+      <span>
+        Status
+      </span>
+
+      <span>
+        ✅ Approved &amp; merged
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <p>
+    The project may still be under development, but this
+    feels like one of those little moments worth remembering.
+  </p>
+
+
+  <p class="journal-entry__closing">
+    HarewireBot is now officially at
+    <a
+      href="https://harewire.is-a.bot"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      harewire.is-a.bot
+    </a>.
+  </p>
+
+
+  <blockquote>
+    🐇💨 <em>The rabbit has found a home.</em>
+  </blockquote>
+
+
+  <!-- =========================================
+       SOURCE / REFERENCE
+       ========================================= -->
+
+  <div class="journal-entry__source">
+
+    <span>
+      Domain request:
+    </span>
+
+    <a
+      href="https://github.com/free-domains/is-a.bot/pull/96"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Free Domains — Pull Request #96 ↗
+    </a>
+
+  </div>
+
+</article>
+
 
     <div class="page-back">
 

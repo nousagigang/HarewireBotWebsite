@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="The 2024 Harewire Archive — documentation and records from the original Harewire Discord bot."
+  >
+
+  <title>Harewire Archive — 2024</title>
+
+  <style>
+
+    :root {
+      --bg: #080808;
+      --panel: #101010;
+      --panel-light: #151515;
+
+      --orange: #ff7a18;
+      --orange-bright: #ff9a3c;
+
+      --text: #e8e8e8;
+      --muted: #8b8b8b;
+      --line: #292929;
+
+      --green: #72d572;
+
+      --terminal:
+        "Courier New",
+        Courier,
+        monospace;
+
+      --sans:
+        Arial,
+        Helvetica,
+        sans-serif;
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      margin: 0;
+
+      background:
+        radial-gradient(
+          circle at top,
+          #17100a 0%,
+          var(--bg) 45%
+        );
+
+      color: var(--text);
+
+      font-family: var(--sans);
+
+      line-height: 1.7;
+    }
+
+
+    a {
+      color: var(--orange-bright);
+
+      text-decoration: none;
+    }
+
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================================
+       HEADER
+       ========================================= */
+
+    header {
+      padding: 70px 20px 45px;
+
+      text-align: center;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+
+    .archive-label {
+      display: inline-block;
+
+      margin-bottom: 20px;
+      padding: 7px 13px;
+
+      border: 1px solid var(--orange);
+
+      color: var(--orange);
+
+      font-family: var(--terminal);
+      font-size: 11px;
+
+      letter-spacing: 2px;
+    }
+
+
+    header h1 {
+      margin: 0;
+
+      color: var(--orange-bright);
+
+      font-family: var(--terminal);
+
+      font-size:
+        clamp(34px, 7vw, 64px);
+
+      letter-spacing: -2px;
+    }
+
+
+    header p {
+      max-width: 650px;
+
+      margin: 20px auto 0;
+
+      color: var(--muted);
+
+      font-size: 17px;
+    }
+
+
+    /* =========================================
+       MAIN
+       ========================================= */
+
+    main {
+      width: min(900px, calc(100% - 40px));
+
+      margin: 0 auto;
+
+      padding: 60px 0 90px;
+    }
+
+
+    section {
+      margin-bottom: 60px;
+    }
+
+
+    h2 {
+      margin-bottom: 20px;
+
+      color: var(--orange);
+
+      font-family: var(--terminal);
+
+      font-size: 24px;
+    }
+
+
+    p {
+      margin: 0 0 20px;
+    }
+
+
+    .intro {
+      font-size: 19px;
+
+      color: #d4d4d4;
+    }
+
+
+    /* =========================================
+       ARCHIVE NOTICE
+       ========================================= */
+
+    .archive-notice {
+      margin: 35px 0;
+      padding: 22px 25px;
+
+      border-left: 4px solid var(--orange);
+
+      background: var(--panel);
+
+      color: #d6d6d6;
+    }
+
+
+    .archive-notice strong {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: var(--orange-bright);
+
+      font-family: var(--terminal);
+    }
+
+
+    /* =========================================
+       ARCHIVE CARDS
+       ========================================= */
+
+    .archive-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 18px;
+    }
+
+
+    .archive-card {
+      display: block;
+
+      padding: 25px;
+
+      border: 1px solid var(--line);
+
+      background: var(--panel);
+
+      transition:
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        background 0.2s ease;
+    }
+
+
+    .archive-card:hover {
+      border-color: var(--orange);
+
+      background: var(--panel-light);
+
+      text-decoration: none;
+
+      transform: translateY(-3px);
+    }
+
+
+    .archive-card__icon {
+      display: block;
+
+      margin-bottom: 12px;
+
+      font-size: 28px;
+    }
+
+
+    .archive-card h3 {
+      margin: 0 0 8px;
+
+      color: var(--orange-bright);
+
+      font-family: var(--terminal);
+
+      font-size: 17px;
+    }
+
+
+    .archive-card p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+
+    /* =========================================
+       TIMELINE
+       ========================================= */
+
+    .timeline {
+      position: relative;
+
+      margin-top: 30px;
+      padding-left: 30px;
+
+      border-left: 1px solid var(--line);
+    }
+
+
+    .timeline-item {
+      position: relative;
+
+      margin-bottom: 35px;
+    }
+
+
+    .timeline-item::before {
+      content: "";
+
+      position: absolute;
+
+      left: -36px;
+      top: 7px;
+
+      width: 10px;
+      height: 10px;
+
+      border: 2px solid var(--orange);
+
+      background: var(--bg);
+    }
+
+
+    .timeline-year {
+      display: block;
+
+      margin-bottom: 5px;
+
+      color: var(--orange);
+
+      font-family: var(--terminal);
+
+      font-size: 12px;
+
+      letter-spacing: 2px;
+    }
+
+
+    .timeline-item h3 {
+      margin: 0 0 8px;
+
+      color: var(--text);
+
+      font-size: 18px;
+    }
+
+
+    .timeline-item p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+
+    /* =========================================
+       ORIGINAL WEBSITE
+       ========================================= */
+
+    .original-site {
+      padding: 30px;
+
+      border: 1px solid var(--line);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 122, 24, 0.07),
+          transparent
+        );
+    }
+
+
+    .original-site h3 {
+      margin-top: 0;
+
+      color: var(--orange-bright);
+
+      font-family: var(--terminal);
+    }
+
+
+    .original-site-url {
+      display: inline-block;
+
+      margin-top: 8px;
+
+      padding: 10px 15px;
+
+      border: 1px solid var(--orange);
+
+      font-family: var(--terminal);
+
+      font-size: 14px;
+    }
+
+
+    /* =========================================
+       FOOTER
+       ========================================= */
+
+    footer {
+      padding: 35px 20px;
+
+      border-top: 1px solid var(--line);
+
+      text-align: center;
+
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+
+    footer .rabbit {
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 22px;
+    }
+
+
+    /* =========================================
+       RESPONSIVE
+       ========================================= */
+
+    @media (max-width: 650px) {
+
+      header {
+        padding-top: 50px;
+      }
+
+
+      main {
+        width: min(100% - 30px, 900px);
+
+        padding-top: 45px;
+      }
+
+
+      .archive-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .archive-card {
+        padding: 22px;
+      }
+
+
+      .timeline {
+        padding-left: 25px;
+      }
+
+
+      .timeline-item::before {
+        left: -31px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================================
+       HEADER
+       ========================================= -->
+
+  <header>
+
+    <div class="archive-label">
+      ARCHIVE / 2024
+    </div>
+
+    <h1>
+      🐇 Harewire
+    </h1>
+
+    <p>
+      The beginning of the Harewire Bot Project.
+      Preserved from its original 2024 era.
+    </p>
+
+  </header>
+
+
+  <!-- =========================================
+       MAIN CONTENT
+       ========================================= -->
+
+  <main>
+
+
+    <!-- INTRODUCTION -->
+
+    <section>
+
+      <p class="intro">
+        Before there was <strong>HarewireBot</strong>,
+        there was simply <strong>Harewire</strong>.
+      </p>
+
+      <p>
+        Created in 2024 for the <strong>Nousagi Gang</strong>,
+        the original Harewire was a Discord bot built using
+        BotGhost.
+      </p>
+
+      <p>
+        It was created as a customizable utility bot for the
+        group's Discord community and became part of the
+        games, conversations, and online spaces shared by
+        the group.
+      </p>
+
+      <p>
+        This archive preserves documentation and other
+        materials from that first generation of Harewire.
+      </p>
+
+
+      <div class="archive-notice">
+
+        <strong>
+          ⚠️ ARCHIVED MATERIAL
+        </strong>
+
+        The materials in this section describe the original
+        2024 Harewire bot. They are preserved for historical
+        reference and may no longer accurately describe
+        the current HarewireBot project.
+
+      </div>
+
+    </section>
+
+
+    <!-- ARCHIVED MATERIALS -->
+
+    <section>
+
+      <h2>
+        📚 Archived Materials
+      </h2>
+
+      <div class="archive-grid">
+
+
+        <a
+          class="archive-card"
+          href="commands.html"
+        >
+
+          <span class="archive-card__icon">
+            📋
+          </span>
+
+          <h3>
+            Original Commands
+          </h3>
+
+          <p>
+            Documentation for commands and functionality
+            available in the original Harewire bot.
+          </p>
+
+        </a>
+
+
+        <a
+          class="archive-card"
+          href="privacy-policy.html"
+        >
+
+          <span class="archive-card__icon">
+            🔐
+          </span>
+
+          <h3>
+            Privacy Policy
+          </h3>
+
+          <p>
+            The privacy policy that applied to the
+            original 2024 Harewire bot.
+          </p>
+
+        </a>
+
+
+        <a
+          class="archive-card"
+          href="terms-of-service.html"
+        >
+
+          <span class="archive-card__icon">
+            📜
+          </span>
+
+          <h3>
+            Terms of Service
+          </h3>
+
+          <p>
+            The terms and conditions that applied to
+            the original Harewire project.
+          </p>
+
+        </a>
+
+
+        <a
+          class="archive-card"
+          href="https://harewire.pages.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <span class="archive-card__icon">
+            🌐
+          </span>
+
+          <h3>
+            Original Website
+          </h3>
+
+          <p>
+            Visit the original Harewire website as it
+            existed during its original era.
+          </p>
+
+        </a>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- HISTORY -->
+
+    <section>
+
+      <h2>
+        🕰️ A Little History
+      </h2>
+
+
+      <div class="timeline">
+
+
+        <div class="timeline-item">
+
+          <span class="timeline-year">
+            2024
+          </span>
+
+          <h3>
+            Harewire is created
+          </h3>
+
+          <p>
+            The original Harewire Discord bot is created
+            for the Nousagi Gang using BotGhost.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <span class="timeline-year">
+            2024
+          </span>
+
+          <h3>
+            The first Harewire website
+          </h3>
+
+          <p>
+            A simple website is created to document the
+            bot and its commands.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <span class="timeline-year">
+            2025
+          </span>
+
+          <h3>
+            The Harewire story continues
+          </h3>
+
+          <p>
+            Changes and uncertainty surrounding BotGhost
+            lead to questions about Harewire's future.
+            The original bot nevertheless continues to
+            exist.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <span class="timeline-year">
+            2026
+          </span>
+
+          <h3>
+            HarewireBot begins
+          </h3>
+
+          <p>
+            A new version of the idea begins: an
+            independently developed Discord bot built
+            with Cloudflare Workers.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ORIGINAL WEBSITE -->
+
+    <section>
+
+      <h2>
+        🌐 The Original Home
+      </h2>
+
+
+      <div class="original-site">
+
+        <h3>
+          harewire.pages.dev
+        </h3>
+
+        <p>
+          The original Harewire website remains publicly
+          available as a snapshot of the project's first
+          era.
+        </p>
+
+        <p>
+          It contains the original bot's documentation
+          and represents the first website created for
+          Harewire.
+        </p>
+
+
+        <a
+          class="original-site-url"
+          href="https://harewire.pages.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit harewire.pages.dev ↗
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONNECTION TO CURRENT PROJECT -->
+
+    <section>
+
+      <h2>
+        🐇 From Harewire to HarewireBot
+      </h2>
+
+      <p>
+        The original Harewire and the current HarewireBot
+        are not the same implementation.
+      </p>
+
+      <p>
+        HarewireBot was created in 2026 as a new,
+        independently developed Discord bot inspired by
+        the original project.
+      </p>
+
+      <p>
+        The name was kept because the idea behind Harewire
+        was worth continuing.
+      </p>
+
+      <p>
+        The archive exists to remember where the project
+        came from while the current website documents
+        where it is going.
+      </p>
+
+
+      <blockquote>
+        🐇 <em>
+          Before there was HarewireBot,
+          there was Harewire.
+        </em>
+      </blockquote>
+
+    </section>
+
+
+    <!-- NAVIGATION -->
+
+    <section>
+
+      <h2>
+        ↩ Back to the Project
+      </h2>
+
+      <p>
+        The archive is part of the larger
+        <strong>Harewire Bot Project</strong>.
+      </p>
+
+      <p>
+
+        <a href="../../about.html">
+          ← About the Harewire Bot Project
+        </a>
+
+        <br>
+
+        <a href="../../index.html">
+          ← Return to HarewireBot
+        </a>
+
+      </p>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+       ========================================= -->
+
+  <footer>
+
+    <span class="rabbit">
+      🐇
+    </span>
+
+    <div>
+      Part of the Harewire Bot Project.
+    </div>
+
+    <div>
+      Preserving the past. Building the future.
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
