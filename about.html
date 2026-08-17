@@ -446,6 +446,125 @@
 
     }
 
+
+    /* =========================================
+   ABOUT THE DEVELOPER
+   ========================================= */
+
+.developer-section {
+  margin-top: 70px;
+}
+
+
+.developer-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  margin-top: 30px;
+
+  padding: 25px;
+
+  border: 1px solid var(--line);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 122, 24, 0.07),
+      transparent
+    );
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.developer-card:hover {
+  border-color: var(--orange);
+
+  transform: translateY(-3px);
+}
+
+
+.developer-card__icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 65px;
+  height: 65px;
+
+  border: 1px solid var(--orange);
+
+  font-size: 30px;
+}
+
+
+.developer-card__content {
+  flex: 1;
+}
+
+
+.developer-card h3 {
+  margin: 0 0 5px;
+
+  color: var(--orange-bright);
+
+  font-family: var(--terminal);
+
+  font-size: 20px;
+}
+
+
+.developer-card p {
+  margin: 0 0 15px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+}
+
+
+.developer-link {
+  display: inline-block;
+
+  color: var(--orange-bright);
+
+  font-family: var(--terminal);
+
+  font-size: 13px;
+}
+
+
+.developer-link:hover {
+  color: var(--orange);
+
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .developer-card {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+}
+
   </style>
 </head>
 
@@ -992,6 +1111,75 @@
       </p>
 
     </section>
+
+
+    <!-- =========================================
+     ABOUT THE DEVELOPER
+     ========================================= -->
+
+<section class="developer-section">
+
+  <h2>
+    👩‍💻 About the Developer
+  </h2>
+
+  <p>
+    HarewireBot is independently developed and maintained by
+    <strong>K4LM3D</strong>.
+  </p>
+
+  <p>
+    The project began with a simple Discord bot created in 2024
+    for the <strong>Nousagi Gang</strong>. What started as a
+    customizable community bot eventually became an opportunity
+    to learn how to build and operate a Discord bot independently.
+  </p>
+
+  <p>
+    In 2026, the idea was rebuilt from the ground up as
+    <strong>HarewireBot</strong>, using technologies such as
+    TypeScript, Cloudflare Workers, Hono, and Discord's
+    Interactions API.
+  </p>
+
+  <p>
+    HarewireBot is both a practical project and a learning
+    journey — gradually growing from a simple experiment into
+    something more capable, one phase and one release at a time.
+  </p>
+
+
+  <div class="developer-card">
+
+    <div class="developer-card__icon">
+      🐇
+    </div>
+
+    <div class="developer-card__content">
+
+      <h3>
+        K4LM3D
+      </h3>
+
+      <p>
+        Independent developer, web developer, and the person
+        behind the Harewire Bot Project.
+      </p>
+
+      <a
+        href="https://guns.lol/kaliber"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="developer-link"
+      >
+        Visit K4LM3D's website ↗
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 
   </main>
 
