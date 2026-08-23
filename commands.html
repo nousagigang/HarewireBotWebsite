@@ -3,392 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta
-    name="description"
-    content="Explore HarewireBot's current, upcoming, and planned Discord commands."
-  >
-
+  <meta name="description" content="Explore HarewireBot's current, upcoming, and planned Discord commands.">
   <title>Commands — HarewireBot</title>
-
   <link rel="stylesheet" href="style.css">
-
 </head>
-
-
 <body>
-
   <div class="crt" aria-hidden="true"></div>
-
-
-  <!-- =========================================
-       HEADER
-       ========================================= -->
-
   <script src="Header.js"></script>
   <script>showHeader()</script>
 
-
-  <!-- =========================================
-       MAIN
-       ========================================= -->
-
   <main class="container commands-page">
 
-
     <!-- Page Hero -->
-
     <section class="page-hero">
-
       <p class="panel__label">
         HAREWIREBOT // COMMAND DIRECTORY
       </p>
 
-      <h1>
-        🐇 Commands
-      </h1>
+      <h1>🐇 Commands</h1>
 
       <p>
-        Everything HarewireBot can do — and everything
-        it may learn to do in the future.
+        Everything HarewireBot can do — and everything it may learn to do in the future.
       </p>
 
       <p>
-        This page documents HarewireBot's available
-        Discord slash commands, their options,
-        permissions, and planned additions.
+        This page documents HarewireBot's available Discord slash commands, their options, permissions, and planned additions.
       </p>
 
     </section>
 
-
+l
     <!-- =========================================
          AVAILABLE COMMANDS
          ========================================= -->
-
     <section class="command-section">
-
       <header class="command-section__header">
-
-        <h2>
-          🟢 Available
-        </h2>
-
-        <span class="command-section__status">
-          CURRENTLY OPERATIONAL
-        </span>
-
+        <h2>🟢 Available</h2>
+        <span class="command-section__status">CURRENTLY OPERATIONAL</span>
       </header>
 
-
       <div class="command-list">
-
 
         <!-- /ping -->
-
         <article class="command-card">
-
           <div class="command-card__top">
-
             <div>
-
-              <h3 class="command-name">
-                /ping
-              </h3>
+              <h3 class="command-name">/ping</h3>
 
               <p class="command-description">
-                Checks whether HarewireBot is responding.
-                A simple command, but the one that started it all.
+                Checks whether HarewireBot is responding. A simple command, but the one that started it all.
               </p>
-
             </div>
 
-            <span class="command-badge command-badge--available">
-              AVAILABLE
-            </span>
-
+            <span class="command-badge command-badge--available">AVAILABLE</span>
           </div>
-
 
           <div class="command-meta">
-
             <div class="command-meta__item">
-
-              <span class="command-meta__label">
-                OPTIONS
-              </span>
-
-              <span class="command-meta__value">
-                None
-              </span>
-
+              <span class="command-meta__label">OPTIONS</span>
+              <span class="command-meta__value">None</span>
             </div>
-
-
             <div class="command-meta__item">
-
-              <span class="command-meta__label">
-                PERMISSION
-              </span>
-
-              <span class="command-meta__value">
-                None required
-              </span>
-
+              <span class="command-meta__label">PERMISSION</span>
+              <span class="command-meta__value">None required</span>
             </div>
-
           </div>
-
 
           <div class="command-usage">
-
-            <span class="command-usage__label">
-              USAGE
-            </span>
-
-            <code>
-              /ping
-            </code>
-
+            <span class="command-usage__label">USAGE</span>
+            <code>/ping</code>
           </div>
-
         </article>
-
 
         <!-- /say -->
-
         <article class="command-card">
-
           <div class="command-card__top">
-
             <div>
-
-              <h3 class="command-name">
-                /say
-              </h3>
-
+              <h3 class="command-name">/say</h3>
               <p class="command-description">
-                Makes HarewireBot send a message provided
-                by the user.
+                Makes HarewireBot send a message provided by the user.
               </p>
-
             </div>
-
-            <span class="command-badge command-badge--available">
-              AVAILABLE
-            </span>
-
+            <span class="command-badge command-badge--available">AVAILABLE</span>
           </div>
-
 
           <div class="command-meta">
-
             <div class="command-meta__item">
-
-              <span class="command-meta__label">
-                OPTION
-              </span>
-
-              <span class="command-meta__value">
-                message — required
-              </span>
-
+              <span class="command-meta__label">OPTION</span>
+              <span class="command-meta__value">message — required</span>
             </div>
 
-
             <div class="command-meta__item">
-
-              <span class="command-meta__label">
-                PERMISSION
-              </span>
-
-              <span class="command-meta__value">
-                Manage Messages
-              </span>
-
+              <span class="command-meta__label">PERMISSION</span>
+              <span class="command-meta__value">Manage Messages</span>
             </div>
-
           </div>
-
 
           <div class="command-usage">
-
-            <span class="command-usage__label">
-              USAGE
-            </span>
-
-            <code>
-              /say message: Hello, world!
-            </code>
-
+            <span class="command-usage__label">USAGE</span>
+            <code>/say message: Hello, world!</code>
           </div>
-
 
           <div class="permission-note">
-
             <strong>🔐 Permission protected</strong><br>
-
             The command requires the Discord
-            <strong>Manage Messages</strong> permission.
-            HarewireBot also checks the user's permissions
-            at runtime before executing the command.
-
+            <strong>Manage Messages</strong> permission. HarewireBot also checks the user's permissions at runtime before executing the command.
           </div>
-
         </article>
-
-
       </div>
-
-
-      <div class="command-count">
-        2 COMMANDS AVAILABLE
-      </div>
-
+      <div class="command-count">2 COMMANDS AVAILABLE</div>
     </section>
 
-
-    <!-- =========================================
-         DEVELOPMENT COMMANDS
-         ========================================= -->
-
+    <!-- DEVELOPMENT COMMANDS -->
     <section class="command-section">
-
       <header class="command-section__header">
-
-        <h2>
-          🚧 In Development
-        </h2>
-
-        <span class="command-section__status">
-          PHASE 5 // BOT FEATURES
-        </span>
-
+        <h2>🚧 In Development</h2>
+        <span class="command-section__status">PHASE 5 // BOT FEATURES</span>
       </header>
-
-
       <div class="command-list">
-
         <article class="future-card">
-
-          <span class="future-card__rabbit">
-            🐇
-          </span>
-
-          <strong>
-            NEW COMMANDS ARE BEING PLANNED
-          </strong>
-
-          <p>
-            HarewireBot is currently entering Phase 5,
-            where new functionality will be built on top
-            of the command system established in Phase 4.
-          </p>
-
+          <span class="future-card__rabbit">🐇</span>
+          <strong>NEW COMMANDS ARE BEING PLANNED</strong>
+          <p>HarewireBot is currently entering Phase 5, where new functionality will be built on top of the command system established in Phase 4.</p>
         </article>
-
       </div>
-
     </section>
 
-
-    <!-- =========================================
-         PLANNED COMMANDS
-         ========================================= -->
-
+    <!-- PLANNED COMMANDS -->
     <section class="command-section">
-
       <header class="command-section__header">
-
-        <h2>
-          🔮 Future Ideas
-        </h2>
-
-        <span class="command-section__status">
-          SUBJECT TO CHANGE
-        </span>
-
+        <h2>🔮 Future Ideas</h2>
+        <span class="command-section__status">SUBJECT TO CHANGE</span>
       </header>
-
-
       <div class="command-list">
-
         <article class="future-card">
-
-          <span class="future-card__rabbit">
-            💭
-          </span>
-
-          <strong>
-            THE LIST IS STILL GROWING
-          </strong>
-
-          <p>
-            Future commands will appear here as ideas
-            become actual development plans.
-          </p>
-
+          <span class="future-card__rabbit">💭</span>
+          <strong>THE LIST IS STILL GROWING</strong>
+          <p>Future commands will appear here as ideas become actual development plans.</p>
         </article>
-
       </div>
-
     </section>
 
-
-    <!-- =========================================
-         NOTE
-         ========================================= -->
-
+    <!-- NOTE -->
     <section class="commands-note">
-
-      <span class="commands-note__label">
-        COMMANDS // DEVELOPMENT NOTE
-      </span>
-
-      <p>
-        HarewireBot's command list is expected to grow
-        over time. Some commands may change, be replaced,
-        or disappear as the project evolves.
-      </p>
-
-      <p style="margin-top: 14px;">
-        The command system is designed to make adding
-        new functionality easier as development continues.
-      </p>
-
+      <span class="commands-note__label">COMMANDS // DEVELOPMENT NOTE</span>
+      <p>HarewireBot's command list is expected to grow over time. Some commands may change, be replaced, or disappear as the project evolves.</p>
+      <p style="margin-top: 14px;">The command system is designed to make adding new functionality easier as development continues.</p>
     </section>
-
 
     <!-- Back -->
-
     <div class="page-back">
-
-      <a
-        class="pixel-button"
-        href="index.html"
-      >
-        ← BACK TO HOME
-      </a>
-
+      <a class="pixel-button" href="index.html">← BACK TO HOME</a>
     </div>
-
-
   </main>
-
-
-  <!-- =========================================
-       FOOTER
-       ========================================= -->
 
   <script src="Footer.js"></script>
   <script>showFooter()</script>
-
-
-  <!-- =========================================
-       MOBILE NAVIGATION
-       ========================================= -->
-
   <script src="menu.js"></script>
-
 </body>
 </html>
