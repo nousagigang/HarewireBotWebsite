@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="HarewireBot — a Discord bot in the making, one phase, one command, and one release at a time.">
   <title>HarewireBot</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet"> -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,12 +39,23 @@
         <button id="menu-button" class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
           MENU
         </button>
-        <nav id="site-nav" class="nav" aria-label="Main navigation">
+        <!-- <nav id="site-nav" class="nav" aria-label="Main navigation">
           <a href="#about">ABOUT</a>
           <a href="#progress">PROGRESS</a>
           <a href="#journey">JOURNEY</a>
+        </nav> -->
+        <nav id="site-nav" class="nav" aria-label="Main navigation">
+          <a href="index.html">HOME</a>
+          <a href="development.html">DEVELOPMENT</a>
+          <a href="roadmap.html">ROADMAP</a>
+          <a href="commands.html">COMMANDS</a>
+          <a href="changelog.html">CHANGELOG</a>
+          <a href="status.html">STATUS</a>
         </nav>
+
       </header>
+      <!--<script src="Header.js"></script>
+      <script>showHeader()</script>-->
 
       <div id="top"></div>
 
@@ -53,7 +64,8 @@
         <div class="container hero__content">
           <p class="status-line"><span class="status-dot"></span> SYSTEM ONLINE // DEVELOPMENT BUILD</p>
           <h2>HarewireBot</h2>
-          <p class="hero__tagline">The rabbit is still running.</p>
+          <p class="hero__tagline"></p>
+          <!--<p class="hero__tagline">The rabbit is still running.</p>-->
           <p class="hero__sub">A Discord bot in the making — one phase, one command, and one release at a time.</p>
           <a class="pixel-button" href="#about">ENTER DEVELOPMENT HUB <span>→</span></a>
         </div>
@@ -69,7 +81,7 @@
 
           <p>The project started as an experiment to explore how a lightweight, serverless Discord bot could be built, deployed, and gradually expanded into a useful server utility.</p>
 
-          <p>It is still a work in progress — but the rabbit is already learning how to talk. 🐇💬</p>
+          <p>It is still a work in progress — but the bot is already learning how to talk. 🐇💬</p>
         </section>
 
         <section class="warning-panel">

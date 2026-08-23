@@ -1,53 +1,154 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="HarewireBot development status, current milestone, progress, and development philosophy.">
-<title>Development — HarewireBot</title><link rel="stylesheet" href="style.css"></head>
-<body><div class="crt" aria-hidden="true"></div>
-<script src="Header.js"></script><script>showHeader()</script>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="HarewireBot development status, current milestone, progress, and development philosophy."/>
+    <title>Development — HarewireBot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="crt" aria-hidden="true"></div>
+    <script src="Header.js"></script>
+    <script>showHeader();</script>
 
-<main class="container development-page">
-<section class="page-hero"><p class="panel__label">HAREWIREBOT // DEVELOPMENT MONITOR</p><h1>Development</h1>
-<p>HarewireBot is actively under development.</p><p>The project is built incrementally through development phases, with each phase focusing on a specific part of the bot. Features are implemented, tested, and released as milestones are completed.</p><p>This page provides a snapshot of where HarewireBot currently stands.</p></section>
+    <main class="container development-page">
+      <section class="page-hero">
+        <p class="panel__label">HAREWIREBOT // DEVELOPMENT MONITOR</p>
+        <h1>Development</h1>
+        <p>HarewireBot is actively under development.</p>
+        <p>The project is built incrementally through development phases, with each phase focusing on a specific part of the bot. Features are implemented, tested, and released as milestones are completed.</p>
+        <p>This page provides a snapshot of where HarewireBot currently stands.</p>
+      </section>
 
-<section class="status-grid">
-<div class="status-card active"><small>DEVELOPMENT STATUS</small><strong>🚧 ACTIVE DEVELOPMENT</strong><i></i></div>
-<div class="status-card"><small>CURRENT VERSION</small><strong>v0.3.0</strong><span>PRE-RELEASE</span></div>
-<div class="status-card"><small>CURRENT MILESTONE</small><strong>PHASE 5</strong><span>BOT FEATURES</span></div>
-<div class="status-card"><small>PREVIOUS MILESTONE</small><strong>PHASE 4</strong><span>COMMAND SYSTEM ✓</span></div>
-</section>
+      <section class="status-grid">
+        <div class="status-card active">
+          <small>DEVELOPMENT STATUS</small>
+          <strong>🚧 ACTIVE DEVELOPMENT</strong>
+          <i></i>
+        </div>
+        <div class="status-card">
+          <small>CURRENT VERSION</small>
+          <strong>v0.3.0</strong>
+          <span>PRE-RELEASE</span>
+        </div>
+        <div class="status-card">
+          <small>CURRENT MILESTONE</small>
+          <strong>PHASE 5</strong>
+          <span>BOT FEATURES</span>
+        </div>
+        <div class="status-card">
+          <small>PREVIOUS MILESTONE</small>
+          <strong>PHASE 4</strong>
+          <span>COMMAND SYSTEM ✓</span>
+        </div>
+      </section>
 
-<section class="dev-panel"><span class="panel__label">SYSTEM // PROGRESS</span><h2>📊 Overall Progress</h2>
-<div class="progress-list">
-<div class="progress-row done"><span>PHASE 1</span><b>Foundation</b><em>✓</em></div>
-<div class="progress-row done"><span>PHASE 2</span><b>Core Bot</b><em>✓</em></div>
-<div class="progress-row done"><span>PHASE 3</span><b>Project Infrastructure</b><em>✓</em></div>
-<div class="progress-row done"><span>PHASE 4</span><b>Command System</b><em>✓</em></div>
-<div class="progress-row now"><span>PHASE 5</span><b>Bot Features</b><em>🚧</em></div>
-<div class="progress-row future"><span>PHASE 6</span><b>Expansion</b><em>⏳</em></div>
-<div class="progress-row future"><span>PHASE 7</span><b>Production Readiness</b><em>⏳</em></div>
-</div></section>
+      <section class="dev-panel">
+        <span class="panel__label">SYSTEM // PROGRESS</span>
+        <h2>📊 Overall Progress</h2>
+        <div class="progress-list">
+          <div class="progress-row done">
+            <span>PHASE 1</span><b>Foundation</b><em>✓</em>
+          </div>
+          <div class="progress-row done">
+            <span>PHASE 2</span><b>Core Bot</b><em>✓</em>
+          </div>
+          <div class="progress-row done">
+            <span>PHASE 3</span><b>Project Infrastructure</b><em>✓</em>
+          </div>
+          <div class="progress-row done">
+            <span>PHASE 4</span><b>Command System</b><em>✓</em>
+          </div>
+          <div class="progress-row now">
+            <span>PHASE 5</span><b>Bot Features</b><em>🚧</em>
+          </div>
+          <div class="progress-row future">
+            <span>PHASE 6</span><b>Expansion</b><em>⏳</em>
+          </div>
+          <div class="progress-row future">
+            <span>PHASE 7</span><b>Production Readiness</b><em>⏳</em>
+          </div>
+        </div>
+      </section>
 
-<section class="milestone"><small>LATEST MILESTONE // COMPLETE</small><h2>🎉 Phase 4 — Command System</h2><p><strong>Status: Complete</strong></p><p>Phase 4 established the foundation for HarewireBot's slash command system.</p>
-<div class="feature-grid"><span>✓ Slash command architecture</span><span>✓ Command routing</span><span>✓ Discord command registration</span><span>✓ Command options</span><span>✓ <code>/say</code></span><span>✓ Command permissions</span><span>✓ Runtime permission enforcement</span><span>✓ Protected command registration</span></div>
-<div class="milestone-release">PHASE COMPLETE → <strong>HarewireBot v0.3.0</strong></div></section>
+      <section class="milestone">
+        <small>LATEST MILESTONE // COMPLETE</small>
+        <h2>🎉 Phase 4 — Command System</h2>
+        <p><strong>Status: Complete</strong></p>
+        <p>Phase 4 established the foundation for HarewireBot's slash command system.</p>
+        <div class="feature-grid">
+          <span>✓ Slash command architecture</span>
+          <span>✓ Command routing</span>
+          <span>✓ Discord command registration</span>
+          <span>✓ Command options</span>
+          <span>✓ <code>/say</code></span>
+          <span>✓ Command permissions</span>
+          <span>✓ Runtime permission enforcement</span>
+          <span>✓ Protected command registration</span>
+        </div>
+        <div class="milestone-release">
+          PHASE COMPLETE → <strong>HarewireBot v0.3.0</strong>
+        </div>
+      </section>
 
-<section class="current-work"><span class="panel__label">LIVE DEVELOPMENT</span><h2>🚧 What's Happening Now?</h2>
-<h3>Phase 5 — Bot Features</h3><p>With the command system established, development is moving toward building the features that will make HarewireBot more useful in a Discord server.</p><p>The focus is currently on exploring and implementing:</p>
-<ul><li>Server utility features</li><li>Messaging capabilities</li><li>Configuration</li><li>Persistent information</li><li>Additional quality-of-life features</li></ul>
-<div class="note">PHASE 5 IS INTENTIONALLY FLEXIBLE WHILE THE PROJECT'S FEATURE SET TAKES SHAPE.</div></section>
+      <section class="current-work">
+        <span class="panel__label">LIVE DEVELOPMENT</span>
+        <h2>🚧 What's Happening Now?</h2>
+        <h3>Phase 5 — Bot Features</h3>
+        <p>With the command system established, development is moving toward building the features that will make HarewireBot more useful in a Discord server.</p>
+        <p>The focus is currently on exploring and implementing:</p>
+        <ul>
+          <li>Server utility features</li>
+          <li>Messaging capabilities</li>
+          <li>Configuration</li>
+          <li>Persistent information</li>
+          <li>Additional quality-of-life features</li>
+        </ul>
+        <div class="note">
+          PHASE 5 IS INTENTIONALLY FLEXIBLE WHILE THE PROJECT'S FEATURE SET TAKES SHAPE.
+        </div>
+      </section>
 
-<section class="philosophy"><span class="panel__label">DEVELOPMENT PROTOCOL</span><h2>📅 Development Philosophy</h2>
-<p>HarewireBot isn't being built all at once.</p><p>Each milestone is broken into smaller phases so that features can be developed, tested, and improved before moving forward.</p><p>This approach helps keep the project manageable while giving HarewireBot room to evolve naturally.</p>
-<blockquote><strong>Build it.</strong> Test it. Improve it. Then move forward.</blockquote></section>
+      <section class="philosophy">
+        <span class="panel__label">DEVELOPMENT PROTOCOL</span>
+        <h2>📅 Development Philosophy</h2>
+        <p>HarewireBot isn't being built all at once.</p>
+        <p>Each milestone is broken into smaller phases so that features can be developed, tested, and improved before moving forward.</p>
+        <p>This approach helps keep the project manageable while giving HarewireBot room to evolve naturally.</p>
+        <blockquote>
+          <strong>Build it.</strong> Test it. Improve it. Then move forward.
+        </blockquote>
+      </section>
 
-<section class="private-panel"><div class="icon">🔐</div><div><span class="panel__label">PROJECT STATUS</span><h2>Private Development</h2>
-<p>The HarewireBot source repository is currently private.</p><p>The public website exists to share the project's progress while development continues. The source may become public in the future as the project matures.</p><p>For now, this site is the place to follow HarewireBot's journey.</p></div></section>
+      <section class="private-panel">
+        <div class="icon">🔐</div>
+        <div>
+          <span class="panel__label">PROJECT STATUS</span>
+          <h2>Private Development</h2>
+          <p>The HarewireBot source repository is currently private.</p>
+          <p>The public website exists to share the project's progress while development continues. The source may become public in the future as the project matures.</p>
+          <p>For now, this site is the place to follow HarewireBot's journey.</p>
+        </div>
+      </section>
 
-<section class="keep-watching"><span class="panel__label">SIGNAL // CONTINUOUS</span><h2>🐇 Keep Watching</h2><p>New milestones, releases, and major development changes will be reflected across the site.</p>
-<p>Check the <a href="changelog.html">Changelog</a> for detailed release history or the <a href="roadmap.html">Roadmap</a> to see what's planned next.</p><strong>HarewireBot is still being built.</strong><blockquote>🐇💨 <em>And the rabbit keeps running.</em></blockquote></section>
-<div class="page-back"><a class="pixel-button" href="index.html">← BACK TO HOME</a></div></main>
+      <section class="keep-watching">
+        <span class="panel__label">SIGNAL // CONTINUOUS</span>
+        <h2>🐇 Keep Watching</h2>
+        <p>New milestones, releases, and major development changes will be reflected across the site.</p>
+        <p>
+          Check the <a href="changelog.html">Changelog</a> for detailed release history or the <a href="roadmap.html">Roadmap</a> to see what's planned next.
+        </p>
+        <strong>HarewireBot is still being built.</strong>
+        <blockquote>🐇💨 <em>And the rabbit keeps running.</em></blockquote>
+      </section>
+      <div class="page-back">
+        <a class="pixel-button" href="index.html">← BACK TO HOME</a>
+      </div>
+    </main>
 
-<script src="Footer.js"></script><script>showFooter()</script>
-<script src="menu.js"></script>
-</body></html>
+    <script src="Footer.js"></script>
+    <script>showFooter();</script>
+    <script src="menu.js"></script>
+  </body>
+</html>
