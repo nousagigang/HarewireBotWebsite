@@ -3,367 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta
-    name="description"
-    content="Something went wrong on the HarewireBot website."
-  >
-
+  <meta name="description" content="Something went wrong on the HarewireBot website.">
   <title>Something Went Wrong — HarewireBot</title>
-
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* =========================================
-       HAREWIREBOT — ERROR PAGE
-       ========================================= */
-
-    .error-page {
-      min-height: calc(100vh - 80px);
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 70px 20px 90px;
-    }
-
-
-    .error-panel {
-      width: 100%;
-      max-width: 760px;
-
-      padding: 45px 35px;
-
-      border: 1px solid var(--line);
-
-      background:
-        linear-gradient(
-          180deg,
-          rgba(255, 130, 35, 0.035),
-          rgba(0, 0, 0, 0.12)
-        );
-
-      text-align: center;
-
-      position: relative;
-    }
-
-
-    /* ---------- Terminal label ---------- */
-
-    .error-panel__label {
-      display: inline-block;
-
-      margin-bottom: 30px;
-
-      color: var(--muted);
-
-      font-family: var(--terminal);
-      font-size: 12px;
-      letter-spacing: 2px;
-    }
-
-
-    /* ---------- Error code ---------- */
-
-    .error-code {
-      margin: 0;
-
-      color: var(--orange-bright);
-
-      font-family: var(--terminal);
-
-      font-size: clamp(70px, 15vw, 150px);
-
-      line-height: 0.9;
-
-      letter-spacing: -5px;
-
-      text-shadow:
-        0 0 15px rgba(255, 130, 35, 0.15);
-    }
-
-
-    /* ---------- Title ---------- */
-
-    .error-title {
-      margin: 30px 0 15px;
-
-      color: var(--text);
-
-      font-size: clamp(25px, 5vw, 42px);
-    }
-
-
-    /* ---------- Message ---------- */
-
-    .error-message {
-      max-width: 570px;
-
-      margin: 0 auto;
-
-      color: #c8a77d;
-
-      line-height: 1.8;
-    }
-
-
-    /* ---------- Terminal ---------- */
-
-    .error-terminal {
-      max-width: 570px;
-
-      margin: 35px auto 0;
-
-      padding: 20px 22px;
-
-      border: 1px solid var(--line);
-
-      background: #090909;
-
-      text-align: left;
-
-      font-family: var(--terminal);
-      font-size: 13px;
-
-      line-height: 1.8;
-
-      overflow-x: auto;
-    }
-
-
-    .error-terminal__prompt {
-      color: var(--muted);
-    }
-
-
-    .error-terminal__command {
-      color: var(--orange);
-    }
-
-
-    .error-terminal__response {
-      color: #a9b98d;
-    }
-
-
-    /* ---------- Rabbit ---------- */
-
-    .error-rabbit {
-      margin: 35px 0 0;
-
-      font-size: 46px;
-
-      animation: rabbit-hop 2.2s ease-in-out infinite;
-    }
-
-
-    @keyframes rabbit-hop {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-7px);
-      }
-
-    }
-
-
-    /* ---------- Buttons ---------- */
-
-    .error-actions {
-      display: flex;
-
-      justify-content: center;
-
-      flex-wrap: wrap;
-
-      gap: 12px;
-
-      margin-top: 35px;
-    }
-
-
-    .error-actions a {
-      text-decoration: none;
-    }
-
-
-    /* ---------- Small message ---------- */
-
-    .error-footer {
-      margin-top: 35px;
-
-      color: var(--muted);
-
-      font-family: var(--terminal);
-      font-size: 12px;
-    }
-
-
-    /* ---------- Mobile ---------- */
-
-    @media (max-width: 600px) {
-
-      .error-page {
-        padding-top: 45px;
-      }
-
-      .error-panel {
-        padding: 35px 20px;
-      }
-
-      .error-code {
-        letter-spacing: -3px;
-      }
-
-      .error-terminal {
-        font-size: 12px;
-      }
-
-    }
-  </style>
 </head>
-
-
 <body>
-
   <div class="crt" aria-hidden="true"></div>
-
-
-  <!-- =========================================
-       HEADER
-       ========================================= -->
-
   <script src="Header.js"></script>
   <script>showHeader()</script>
-
-  <!-- =========================================
-       ERROR
-       ========================================= -->
-
   <main class="error-page">
-
     <section class="error-panel">
-
-      <span class="error-panel__label">
-        HAREWIREBOT // SYSTEM MESSAGE
-      </span>
-
-
-      <h1 class="error-code">
-        404
-      </h1>
-
-
-      <h2 class="error-title">
-        The rabbit couldn't find that.
-      </h2>
-
-
-      <p class="error-message">
-        Whatever you were looking for seems to have
-        wandered off somewhere. The page may have moved,
-        been renamed, or never existed in the first place.
-      </p>
-
-
-      <!-- Terminal -->
-
+      <span class="error-panel__label">HAREWIREBOT // SYSTEM MESSAGE</span>
+      <h1 class="error-code">404</h1>
+      <h2 class="error-title">ERROR</h2>
+      <!--Harewire couldn't find that.-->
+      <p class="error-message">Whatever you were looking for seems to have wandered off somewhere. The page may have moved, been renamed, or never existed in the first place.</p>
       <div class="error-terminal">
-
         <div>
-          <span class="error-terminal__prompt">
-            harewire@web:~$
-          </span>
-
-          <span class="error-terminal__command">
-            locate requested_page
-          </span>
+          <span class="error-terminal__prompt">harewire@web:~$</span>
+          <span class="error-terminal__command">locate requested_page</span>
         </div>
-
-
         <div>
-          <span class="error-terminal__response">
-            Searching...
-          </span>
+          <span class="error-terminal__response">Searching...</span>
         </div>
-
-
         <div>
-          <span class="error-terminal__response">
-            No matching page found.
-          </span>
+          <span class="error-terminal__response">No matching page found.</span>
         </div>
-
-
-        <div>
-          <span class="error-terminal__response">
-            Rabbit has left the directory.
-          </span>
-        </div>
-
+        <!--<div>
+          <span class="error-terminal__response">Rabbit has left the directory.</span>
+        </div>-->
       </div>
-
-
-      <!-- Rabbit -->
-
-      <div
-        class="error-rabbit"
-        aria-hidden="true"
-      >
-        🐇💨
-      </div>
-
-
-      <!-- Actions -->
-
+      <div class="error-rabbit" aria-hidden="true">🐇💨</div>
       <div class="error-actions">
-
-        <a
-          class="pixel-button"
-          href="index.html"
-        >
-          ← RETURN HOME
-        </a>
-
-
-        <a
-          class="pixel-button"
-          href="status.html"
-        >
-          CHECK STATUS
-        </a>
-
+        <a class="pixel-button" href="index.html">← RETURN HOME</a>
+        <a class="pixel-button" href="status.html">CHECK STATUS</a>
       </div>
-
-
-      <p class="error-footer">
-        ERROR: PAGE_NOT_FOUND
-      </p>
-
+      <p class="error-footer">ERROR: PAGE_NOT_FOUND</p>
     </section>
-
   </main>
-
-
-  <!-- =========================================
-       FOOTER
-       ========================================= -->
-
   <script src="Footer.js"></script>
   <script>showFooter()</script>
-
-
-  <!-- =========================================
-       MOBILE NAVIGATION
-       ========================================= -->
-
   <script src="menu.js"></script>
-
 </body>
 </html>

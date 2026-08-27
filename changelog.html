@@ -25,48 +25,70 @@
     </section>
 
     <div class="release-list">
-
       <article class="release release--latest">
-        <div class="release__header"><div><span class="release__status">CURRENT RELEASE</span><h2>[0.3.0]</h2></div><time datetime="2026-08-12">2026-08-12</time></div>
+        <div class="release__header">
+          <div>
+            <span class="release__status">CURRENT RELEASE</span>
+            <h2>[0.3.0]</h2>
+          </div>
+          <time datetime="2026-08-12">2026-08-12</time>
+        </div>
 
-        <section class="release__section"><h3>Added</h3><ul>
-          <li>Added reusable slash command architecture.</li>
-          <li>Added <code>/ping</code> command handling through the command router.</li>
-          <li>Added <code>/say</code> command with a required <code>message</code> option.</li>
-          <li>Added command option support for slash commands.</li>
-          <li>Added centralized Discord command registration.</li>
-          <li>Added protected command registration using <code>X-Registration-Secret</code>.</li>
-          <li>Added Discord command permission registration.</li>
-          <li>Added runtime permission enforcement for commands.</li>
-          <li>Added <strong>Manage Messages</strong> permission protection to <code>/say</code>.</li>
-          <li>Added command synchronization through the <code>/register</code> endpoint.</li>
-        </ul></section>
+        <section class="release__section">
+          <h3>Added</h3>
+          <ul>
+            <li>Added reusable slash command architecture.</li>
+            <li>Added <code>/ping</code> command handling through the command router.</li>
+            <li>Added <code>/say</code> command with a required <code>message</code> option.</li>
+            <li>Added command option support for slash commands.</li>
+            <li>Added centralized Discord command registration.</li>
+            <li>Added protected command registration using <code>X-Registration-Secret</code>.</li>
+            <li>Added Discord command permission registration.</li>
+            <li>Added runtime permission enforcement for commands.</li>
+            <li>Added <strong>Manage Messages</strong> permission protection to <code>/say</code>.</li>
+            <li>Added command synchronization through the <code>/register</code> endpoint.</li>
+          </ul>
+        </section>
 
-        <section class="release__section"><h3>Changed</h3><ul>
-          <li>Updated command routing to pass slash command options to command handlers.</li>
-          <li>Updated command registration to include command options and permission requirements.</li>
-          <li>Improved command definitions to support optional default member permissions.</li>
-          <li>Improved command handling architecture to support future commands and permissions.</li>
-        </ul></section>
+        <section class="release__section">
+          <h3>Changed</h3>
+          <ul>
+            <li>Updated command routing to pass slash command options to command handlers.</li>
+            <li>Updated command registration to include command options and permission requirements.</li>
+            <li>Improved command definitions to support optional default member permissions.</li>
+            <li>Improved command handling architecture to support future commands and permissions.</li>
+          </ul>
+        </section>
 
-        <section class="release__section security"><h3>Security</h3><ul>
-          <li>Added permission checks before executing protected commands.</li>
-          <li><code>/say</code> is restricted to members with the <strong>Manage Messages</strong> permission.</li>
-          <li><code>/register</code> continues to require the configured registration secret.</li>
-        </ul></section>
+        <section class="release__section security">
+          <h3>Security</h3>
+          <ul>
+            <li>Added permission checks before executing protected commands.</li>
+            <li><code>/say</code> is restricted to members with the <strong>Manage Messages</strong> permission.</li>
+            <li><code>/register</code> continues to require the configured registration secret.</li>
+          </ul>
+        </section>
 
-        <section class="release__section"><h3>Testing</h3><ul>
-          <li>Verified <code>/ping</code> continues to respond correctly.</li>
-          <li>Verified <code>/say</code> responds correctly with a message.</li>
-          <li>Verified required command options are enforced by Discord.</li>
-          <li>Verified users without the required permission cannot use <code>/say</code>.</li>
-          <li>Verified <code>/register</code> rejects unauthorized requests.</li>
-          <li>Verified <code>/commands</code> reports the expected command definitions and permissions.</li>
-        </ul></section>
+        <section class="release__section">
+          <h3>Testing</h3>
+          <ul>
+            <li>Verified <code>/ping</code> continues to respond correctly.</li>
+            <li>Verified <code>/say</code> responds correctly with a message.</li>
+            <li>Verified required command options are enforced by Discord.</li>
+            <li>Verified users without the required permission cannot use <code>/say</code>.</li>
+            <li>Verified <code>/register</code> rejects unauthorized requests.</li>
+            <li>Verified <code>/commands</code> reports the expected command definitions and permissions.</li>
+          </ul>
+        </section>
       </article>
 
       <article class="release">
-        <div class="release__header"><div><span class="release__status">PRE-RELEASE</span><h2>[0.2.0]</h2></div><time datetime="2026-08-09">2026-08-09</time></div>
+        <div class="release__header"><div>
+          <span class="release__status">PRE-RELEASE</span>
+          <h2>[0.2.0]</h2>
+        </div>
+        <time datetime="2026-08-09">2026-08-09</time>
+      </div>
 
         <section class="release__section"><h3>Added</h3><ul>
           <li>Added a modular command system.</li>
