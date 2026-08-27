@@ -39,13 +39,16 @@
             <span class="phase-number">PHASE 1</span>
             <span class="phase-state">✓ COMPLETE</span>
           </div>
-          <h3>Foundation</h3>
-          <p>Established the initial HarewireBot project and Discord integration.</p>
+          <h3>Project Infrastructure Setup</h3>
+          <p>Established the development and release workflow around HarewireBot.</p>
           <ul class="checklist">
-            <li>Discord application and bot setup</li>
-            <li>Cloudflare Workers integration</li>
-            <li>Discord interaction endpoint</li>
-            <li>Initial <code>/ping</code> command</li>
+            <li>GitHub repository</li>
+            <li>Cloudflare Worker</li>
+            <li>Github → Cloudflare development</li>
+            <li><code>.gitignore</code> & <code>.env.example</code></li>
+            <li>Licence</li>
+            <li>Changelog</li>
+            <li>Development documentation</li>
           </ul>
         </article>
 
@@ -54,13 +57,17 @@
             <span class="phase-number">PHASE 2</span>
             <span class="phase-state">✓ COMPLETE</span>
           </div>
-          <h3>Core Bot</h3>
-          <p>Established the basic structure needed to run HarewireBot reliably.</p>
+          <h3>Discord Foundation</h3>
+          <p>Established the initial HarewireBot project and Discord integration.</p>
           <ul class="checklist">
-            <li>Worker-based bot deployment</li>
+            <li>Discord application and bot setup</li>
+            <li>Bot joined development server</li>
+            <li>Cloudflare Workers integration</li>
+            <li>Discord interaction endpoint</li>
+            <li>Discord signature verification</li>
             <li>Environment configuration</li>
-            <li>Discord interaction verification</li>
-            <li>Initial project documentation</li>
+            <li>Guild slash-command registration</li>
+            <li>Initial project documentaion</li>
           </ul>
         </article>
 
@@ -69,13 +76,13 @@
             <span class="phase-number">PHASE 3</span>
             <span class="phase-state">✓ COMPLETE</span>
           </div>
-          <h3>Project Infrastructure</h3>
-          <p>Established the development and release workflow around HarewireBot.</p>
+          <h3>First Command</h3>
+          <!--<p>Established the basic structure needed to run HarewireBot reliably.</p>-->
           <ul class="checklist">
-            <li>GitHub repository</li>
-            <li>Release and versioning workflow</li>
-            <li>Changelog</li>
-            <li>Development documentation</li>
+            <li><code>/ping</code> registered</li>
+            <li><code>/ping</code> reaches Cloudflaer Worker</li>
+            <li>Worker process the interaction</li>
+            <li>Bot responds: <code>🏓 Pong!</code></li>
           </ul>
         </article>
 
@@ -89,6 +96,8 @@
           <ul class="checklist">
             <li>Command architecture</li>
             <li>Command routing</li>
+            <li>Command execution</li>
+            <li>Project cleanup</li>
             <li>Slash command registration</li>
             <li>Command options</li>
             <li><code>/say</code> command</li>
