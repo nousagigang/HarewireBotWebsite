@@ -1,0 +1,42 @@
+name: Migrate Harewire 2024 Website to Archives
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout migration branch
+        uses: actions/checkout@v4
+        with:
+          ref: archive
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Clone legacy repository
+        run: |
+          git clone --depth 1 https://github.com/nousagigang/harewire.git legacy
+
+      - name: Create destination directory
+        run: |
+          mkdir -p archive/2024
+
+      - name: Copy folder
+        run: |
+          rm -rf /
+          cp -R legacy/archive/2024 archive/2024/
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add archive/2024
+
+          git commit -m "Migrate Harewire main branch from legacy repository" || echo "No changes to commit"
+
+          git push origin HEAD:archive
